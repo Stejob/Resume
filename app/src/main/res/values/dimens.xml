@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_app_large">16dp</dimen>
+    <dimen name="padding_app_normal">8dp</dimen>
+    <dimen name="padding_app_low">4dp</dimen>
+    <dimen name="margin_app_large">16dp</dimen>
+    <dimen name="margin_app_normal">8dp</dimen>
+    <dimen name="margin_app_low">4dp</dimen>
+    <dimen name="margin_text">4dp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="line_spacing">4dp</dimen>
+</resources>

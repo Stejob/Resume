@@ -8,24 +8,20 @@
     android:layoutDirection="ltr"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/header_cover_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="centerCrop"
-
         android:src="@drawable/nav_menu_header_bg_blue"
         app:srcCompat="@drawable/nav_menu_header_bg_blue" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-
         android:clickable="true"
         app:civ_border_width="3dp"
         app:civ_border_color="#FFFFFFFF"
-
         android:id="@+id/profile_pic"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -37,5 +33,67 @@
         android:scaleType="centerCrop"
         android:src="@drawable/reza" >
     </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/my_name"
+        android:textSize="@dimen/text_size_large"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_text"
+        android:layout_below="@id/profile_pic"
+        android:id="@+id/name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_app_large"
+        android:layout_marginRight="@dimen/margin_app_large"
+        android:layout_below="@id/name"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_text"
+            android:text="@string/carrer_objective"
+            android:drawablePadding="@dimen/padding_app_normal"
+            android:clickable="true"
+            android:onClick="emailMe"
+            android:lineSpacingExtra="@dimen/line_spacing"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_text"
+            android:text="@string/email"
+            android:drawableLeft="@drawable/ic_email_24"
+            android:drawablePadding="@dimen/padding_app_normal"
+            android:clickable="true"
+            android:onClick="emailMe"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_text"
+            android:text="@string/phone_number"
+            android:drawableLeft="@drawable/ic_phone_forwarded"
+            android:drawablePadding="@dimen/padding_app_normal"
+            android:clickable="true"
+            android:onClick="callMe"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_text"
+            android:text="@string/location"
+            android:drawableLeft="@drawable/ic_location_on_24"
+            android:drawablePadding="@dimen/padding_app_normal"
+            android:lineSpacingExtra="@dimen/line_spacing"
+            android:clickable="true"
+            android:onClick="locateMe"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
