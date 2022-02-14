@@ -33,4 +33,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.location_on_map)));
         startActivity(intent);
     }
+
+
 }

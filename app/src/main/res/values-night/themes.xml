@@ -17,7 +17,7 @@
     </style>
 
     <style name="TextViewStyle" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/nexa_bold</item>
+        <item name="android:fontFamily">@font/nexa_light</item>
     </style>
 
     <style name="ButtonStyle" parent="android:Widget.Holo.Button">

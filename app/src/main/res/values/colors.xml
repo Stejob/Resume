@@ -8,4 +8,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_text">#8000FF</color>
+
+    <color name="main_act_header_blue">#693de9</color>
+    <color name="main_act_header_blue_light">#AE693DE9</color>
+    <color name="main_act_header_black">#3d3d3d</color>
+    <color name="main_act_header_gray_dark">#474747</color>
+    <color name="main_act_header_gray_light">#595959</color>
+    <color name="logo_blue">#0015ff</color>
+    <color name="logo_purple">#8c11b2</color>
+
+    <color name="btn_state_pressed_yellow_light">#FFEB3B</color>
+    <color name="btn_state_pressed_yellow_dark">#FFC107</color>
 </resources>

@@ -9,4 +9,5 @@
     <dimen name="margin_text">4dp</dimen>
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="line_spacing">4dp</dimen>
+    <dimen name="btn_corners">8dp</dimen>
 </resources>
