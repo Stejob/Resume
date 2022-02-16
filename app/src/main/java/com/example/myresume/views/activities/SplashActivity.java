@@ -1,6 +1,7 @@
-package com.example.myresume;
+package com.example.myresume.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,32 +9,29 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+import com.example.myresume.R;
+import com.example.myresume.databinding.ActivitySplashBinding;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private ImageView logo;
-    private TextView txtLogo;
-
-
+    ActivitySplashBinding mBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-        init();
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
         Animation logoAnim, txtLogoAnim;
         logoAnim = AnimationUtils.loadAnimation(this, R.anim.splash_logo_anim);
         txtLogoAnim = AnimationUtils.loadAnimation(this, R.anim.fade_in_anim);
-        logo.startAnimation(logoAnim);
+        mBinding.logo.startAnimation(logoAnim);
         logoAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                if (logo.getVisibility()!= View.VISIBLE)
-                    logo.setVisibility(View.VISIBLE);
-                if (txtLogo.getVisibility() != View.VISIBLE)
-                    txtLogo.setVisibility(View.VISIBLE);
-                txtLogo.startAnimation(txtLogoAnim);
+                if (mBinding.logo.getVisibility()!= View.VISIBLE)
+                    mBinding.logo.setVisibility(View.VISIBLE);
+                if (mBinding.txtLogo.getVisibility() != View.VISIBLE)
+                    mBinding.txtLogo.setVisibility(View.VISIBLE);
+                mBinding.txtLogo.startAnimation(txtLogoAnim);
             }
 
             @Override
@@ -49,11 +47,6 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    private void init(){
-        logo = findViewById(R.id.logo);
-        txtLogo = findViewById(R.id.txt_logo);
     }
 
     @Override

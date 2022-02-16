@@ -1,18 +1,31 @@
-package com.example.myresume;
+package com.example.myresume.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.myresume.R;
+import com.example.myresume.adapters.FragmentViewPagerAdapter;
+import com.example.myresume.databinding.ActivityMainBinding;
+import com.example.myresume.interfaces.OnMainActButtonClicks;
 
+public class MainActivity extends AppCompatActivity implements OnMainActButtonClicks {
+
+    ActivityMainBinding mBinding;
+    FragmentViewPagerAdapter viewPagerAdapter;
+    ViewPager2 viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        viewPagerAdapter = new FragmentViewPagerAdapter(this);
+        mBinding.viewPager.setAdapter(viewPagerAdapter);
+
     }
 
     public void callMe(View view) {
@@ -35,4 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onMainActBtnClicked(int id) {
+
+    }
 }

@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#D3EAEAEA"
-    tools:context=".SplashActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="140dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/logo"
-        android:visibility="invisible"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D3EAEAEA"
+        tools:context=".views.activities.SplashActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_logo"
-        android:text=" Stejob  "
-        android:layout_below="@id/logo"
-        android:layout_centerInParent="true"
-        android:textSize="48sp"
-        android:fontFamily="@font/itcedsrc"
-        android:textColor="@color/splash_text"
-        android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="140dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/logo"
+            android:visibility="invisible"/>
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_logo"
+            android:text="@string/txt_splash_act"
+            android:layout_below="@id/logo"
+            android:layout_centerInParent="true"
+            android:textSize="48sp"
+            android:fontFamily="@font/itcedsrc"
+            android:textColor="@color/splash_text"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</layout>

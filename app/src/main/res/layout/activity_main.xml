@@ -1,205 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layoutDirection="ltr"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/header_cover_image"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="utils" type="com.example.myresume.utils.UniversalUtils"/>
+    </data>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:scaleType="centerCrop"
-        android:src="@drawable/nav_menu_header_bg_blue"
-        app:srcCompat="@drawable/nav_menu_header_bg_blue" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:clickable="true"
-        app:civ_border_width="3dp"
-        app:civ_border_color="#FFFFFFFF"
-        android:id="@+id/profile_pic"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/header_cover_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-130dp"
-        android:elevation="5dp"
-        android:padding="20dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/reza" >
-    </de.hdodenhof.circleimageview.CircleImageView>
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@id/profile_pic"
-        android:layout_marginStart="@dimen/margin_text"
-        android:layout_marginTop="@dimen/margin_text"
-        android:layout_marginEnd="@dimen/margin_text"
-        android:layout_marginBottom="@dimen/margin_text"
-        android:text="@string/my_name"
-        android:textAlignment="center"
-        android:fontFamily="@font/nexa_bold"
-        android:textSize="@dimen/text_size_large" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_app_large"
-        android:layout_marginRight="@dimen/margin_app_large"
-        android:layout_below="@id/name"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_text"
-            android:text="@string/career_objective"
-            android:drawablePadding="@dimen/padding_app_normal"
-            android:lineSpacingExtra="@dimen/line_spacing"
-            android:justificationMode="inter_word"
-            android:textColor="@android:color/black"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_text"
-            android:text="@string/highlights"
-            android:drawablePadding="@dimen/padding_app_normal"
-            android:lineSpacingExtra="@dimen/line_spacing"
-            android:visibility="gone" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_text"
-            android:text="@string/email"
-            android:drawableLeft="@drawable/ic_email_24"
-            android:drawablePadding="@dimen/padding_app_normal"
-            android:clickable="true"
-            android:onClick="emailMe"
-            android:visibility="gone" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_text"
-            android:text="@string/phone_number"
-            android:drawableLeft="@drawable/ic_phone_forwarded"
-            android:drawablePadding="@dimen/padding_app_normal"
-            android:clickable="true"
-            android:onClick="callMe"
-            android:visibility="gone" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_text"
-            android:text="@string/location"
-            android:drawableLeft="@drawable/ic_location_on_24"
-            android:drawablePadding="@dimen/padding_app_normal"
-            android:lineSpacingExtra="@dimen/line_spacing"
-            android:clickable="true"
-            android:onClick="locateMe"
-            android:visibility="gone" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/margin_app_large"
-        android:id="@+id/btns_box">
+        android:layoutDirection="ltr"
+        tools:context=".views.activities.MainActivity">
+
+        <ImageView
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{utils.mainActHeaderImageUrl}" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_pic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-130dp"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{utils.mainActMyImageUrl}"
+            app:civ_border_color="#FFFFFFFF"
+            app:civ_border_width="3dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/profile_pic"
+            android:layout_marginStart="@dimen/margin_text"
+            android:layout_marginTop="@dimen/margin_text"
+            android:layout_marginEnd="@dimen/margin_text"
+            android:layout_marginBottom="@dimen/margin_text"
+            android:text="@string/my_name"
+            android:textAlignment="center"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="@dimen/text_size_large" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/name"
+            android:id="@+id/view_pager">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_app_large"
+            android:layout_marginRight="@dimen/margin_app_large"
+            android:layout_below="@id/name"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_text"
+                android:text="@string/career_objective"
+                android:drawablePadding="@dimen/padding_app_normal"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:justificationMode="inter_word"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_text"
+                android:text="@string/highlights"
+                android:drawablePadding="@dimen/padding_app_normal"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_text"
+                android:text="@string/email"
+                android:drawableLeft="@drawable/ic_email_24"
+                android:drawablePadding="@dimen/padding_app_normal"
+                android:clickable="true"
+                android:onClick="emailMe"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_text"
+                android:text="@string/phone_number"
+                android:drawableLeft="@drawable/ic_phone_forwarded"
+                android:drawablePadding="@dimen/padding_app_normal"
+                android:clickable="true"
+                android:onClick="callMe"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_text"
+                android:text="@string/location"
+                android:drawableLeft="@drawable/ic_location_on_24"
+                android:drawablePadding="@dimen/padding_app_normal"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:clickable="true"
+                android:onClick="locateMe"
+                android:visibility="gone" />
+
+        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center">
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_app_large"
+            android:id="@+id/btns_box">
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn1"
-                android:background="@drawable/btn_mian_act"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:layout_margin="@dimen/margin_app_large"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_person_pin_24" />
+                android:gravity="center">
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn2"
-                android:background="@drawable/btn_mian_act"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:layout_margin="@dimen/margin_app_large"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_highlight_24" />
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/btn1"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:layout_margin="@dimen/margin_app_large"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person_pin_24" />
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn3"
-                android:background="@drawable/btn_mian_act"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:layout_margin="@dimen/margin_app_large"
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/btn2"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:layout_margin="@dimen/margin_app_large"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_highlight_24" />
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/btn3"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:layout_margin="@dimen/margin_app_large"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_adb_48"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_adb_48"/>
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/btn4"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:layout_margin="@dimen/margin_app_large"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_android_48"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/btn5"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:layout_margin="@dimen/margin_app_large"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person_pin_24"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/btn6"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:layout_margin="@dimen/margin_app_large"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_highlight_24"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center">
-
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn4"
-                android:background="@drawable/btn_mian_act"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:layout_margin="@dimen/margin_app_large"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_android_48"/>
-
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn5"
-                android:background="@drawable/btn_mian_act"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:layout_margin="@dimen/margin_app_large"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_person_pin_24"/>
-
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:id="@+id/btn6"
-                android:background="@drawable/btn_mian_act"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:layout_margin="@dimen/margin_app_large"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_highlight_24"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

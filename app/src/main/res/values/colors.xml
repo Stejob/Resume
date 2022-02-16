@@ -19,4 +19,6 @@
 
     <color name="btn_state_pressed_yellow_light">#FFEB3B</color>
     <color name="btn_state_pressed_yellow_dark">#FFC107</color>
+    <color name="career_fragment_bg">#FFC83A</color>
+    <color name="highlights_fragment_bg">#BEFF25</color>
 </resources>
