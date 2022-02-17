@@ -3,14 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="utils" type="com.example.myresume.utils.UniversalUtils"/>
+        <variable
+            name="utils"
+            type="com.example.myresume.utils.UniversalUtils"/>
+        <variable
+            name="onBtnClicked"
+            type="com.example.myresume.interfaces.OnMainActButtonClicks" />
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layoutDirection="ltr"
-        tools:context=".views.activities.MainActivity">
+        tools:context=".views.activities.MainActivity"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/header_cover_image"
@@ -20,7 +26,7 @@
             android:scaleType="centerCrop"
             app:imageUrl="@{utils.mainActHeaderImageUrl}" />
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_pic"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -33,7 +39,7 @@
             android:scaleType="centerCrop"
             app:imageUrl="@{utils.mainActMyImageUrl}"
             app:civ_border_color="#FFFFFFFF"
-            app:civ_border_width="3dp"></de.hdodenhof.circleimageview.CircleImageView>
+            app:civ_border_width="3dp"/>
 
         <TextView
             android:id="@+id/name"
@@ -44,16 +50,19 @@
             android:layout_marginTop="@dimen/margin_text"
             android:layout_marginEnd="@dimen/margin_text"
             android:layout_marginBottom="@dimen/margin_text"
+            android:fontFamily="@font/nexa_bold"
             android:text="@string/my_name"
             android:textAlignment="center"
-            android:fontFamily="@font/nexa_bold"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_size_large" />
 
         <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-8dp"
             android:layout_below="@id/name"
-            android:id="@+id/view_pager">
+            android:layout_marginBottom="240dp">
 
         </androidx.viewpager2.widget.ViewPager2>
 
@@ -138,22 +147,24 @@
                 <ImageButton
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:id="@+id/btn1"
+                    android:id="@+id/btn_career_highlights"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:layout_margin="@dimen/margin_app_large"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_person_pin_24" />
+                    android:src="@drawable/ic_person_pin_24"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[0])}"/>
 
                 <ImageButton
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:id="@+id/btn2"
+                    android:id="@+id/btn_professional_experiences"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:layout_margin="@dimen/margin_app_large"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_highlight_24" />
+                    android:src="@drawable/ic_highlight_24"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[1])}"/>
 
                 <ImageButton
                     android:layout_width="80dp"
@@ -163,7 +174,8 @@
                     android:elevation="@dimen/cardview_default_elevation"
                     android:layout_margin="@dimen/margin_app_large"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_adb_48"/>
+                    android:src="@drawable/ic_adb_48"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[2])}"/>
 
             </LinearLayout>
 
@@ -182,7 +194,8 @@
                     android:elevation="@dimen/cardview_default_elevation"
                     android:layout_margin="@dimen/margin_app_large"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_android_48"/>
+                    android:src="@drawable/ic_android_48"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[3])}"/>
 
                 <ImageButton
                     android:layout_width="80dp"
@@ -192,7 +205,8 @@
                     android:elevation="@dimen/cardview_default_elevation"
                     android:layout_margin="@dimen/margin_app_large"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_person_pin_24"/>
+                    android:src="@drawable/ic_person_pin_24"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[4])}"/>
 
                 <ImageButton
                     android:layout_width="80dp"
@@ -202,7 +216,8 @@
                     android:elevation="@dimen/cardview_default_elevation"
                     android:layout_margin="@dimen/margin_app_large"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_highlight_24"/>
+                    android:src="@drawable/ic_highlight_24"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[5])}"/>
 
             </LinearLayout>
 

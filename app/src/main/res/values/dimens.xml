@@ -10,4 +10,6 @@
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="line_spacing">4dp</dimen>
     <dimen name="btn_corners">8dp</dimen>
+    <dimen name="cardview_radius">12dp</dimen>
+    <dimen name="margin_app_extra_large">40dp</dimen>
 </resources>

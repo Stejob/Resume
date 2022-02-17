@@ -1,5 +1,7 @@
 package com.example.myresume.interfaces;
 
+import android.view.View;
+
 public interface OnMainActButtonClicks {
-    public void onMainActBtnClicked (int id);
+    void onMainActBtnClicked (int position);
 }
