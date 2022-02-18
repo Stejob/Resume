@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="line_color">@color/white</color>
+    <color name="frag_header_back_color">@color/black</color>
+    <color name="text_header_color">@color/white</color>
+</resources>

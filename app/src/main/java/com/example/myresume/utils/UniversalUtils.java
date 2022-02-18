@@ -11,4 +11,5 @@ public class UniversalUtils {
     public static final int [] SECTIONS = {CAREER_HIGHLIGHTS, PROFESSIONAL_EXPERIENCES,
             2, 3,
             4, 5};
+
 }

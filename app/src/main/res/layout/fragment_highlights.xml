@@ -1,26 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.fragments.HighlightsFragment"
-    android:background="@color/highlights_fragment_bg">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
+        tools:context=".views.fragments.HighlightsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/highlights"
-            android:textColor="@color/black"
-            android:layout_marginStart="@dimen/margin_app_large"
-            android:layout_marginEnd="@dimen/margin_app_large"
-            android:lineSpacingExtra="@dimen/line_spacing"/>
+            android:layout_marginLeft="@dimen/margin_app_extra_large"
+            android:layout_marginTop="@dimen/margin_app_big"
+            android:layout_marginBottom="@dimen/margin_app_low"
+            android:background="@drawable/bd_view_pager">
 
-    </androidx.core.widget.NestedScrollView>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_app_large"
+                android:layout_marginEnd="@dimen/margin_app_large"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_app_large">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:justificationMode="inter_word"
+                        android:lineSpacingExtra="@dimen/line_spacing"
+                        android:text="@string/career_objective" />
 
 
-</FrameLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlights_item_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlights_item_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlights_item_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlights_item_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlights_item_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlights_item_5" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/second_frag_header"
+            android:textStyle="bold"
+            android:textColor="@color/text_header_color"
+            android:background="?android:colorBackground"
+            android:id="@+id/txt_header"
+            android:layout_marginStart="@dimen/margin_frag_header"
+            android:paddingLeft="@dimen/padding_app_normal"
+            android:paddingRight="@dimen/padding_app_normal"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/iv_icon_size"
+            android:layout_height="@dimen/iv_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_app_very_large"
+            android:background="@drawable/bg_icon_fragment"
+            android:paddingLeft="@dimen/padding_app_low"
+            android:paddingTop="7dp"
+            android:paddingRight="@dimen/padding_app_low"
+            android:paddingBottom="@dimen/padding_app_low"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_highlight_24" />
+
+    </RelativeLayout>
+
+</layout>

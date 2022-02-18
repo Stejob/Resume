@@ -15,8 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layoutDirection="ltr"
-        tools:context=".views.activities.MainActivity"
-        android:background="@color/white">
+        tools:context=".views.activities.MainActivity">
 
         <ImageView
             android:id="@+id/header_cover_image"
@@ -47,20 +46,20 @@
             android:layout_height="40dp"
             android:layout_below="@id/profile_pic"
             android:layout_marginStart="@dimen/margin_text"
-            android:layout_marginTop="@dimen/margin_text"
+            android:layout_marginTop="@dimen/margin_text_minus"
             android:layout_marginEnd="@dimen/margin_text"
             android:layout_marginBottom="@dimen/margin_text"
             android:fontFamily="@font/nexa_bold"
             android:text="@string/my_name"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/text_header_color"
             android:textSize="@dimen/text_size_large" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="-8dp"
+            android:layout_marginRight="@dimen/minus_margin_main_act"
             android:layout_below="@id/name"
             android:layout_marginBottom="240dp">
 
