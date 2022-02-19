@@ -19,6 +19,10 @@
     <dimen name="margin_app_extra_large">40dp</dimen>
     <dimen name="iv_icon_size">48dp</dimen>
 
+    <dimen name="margin_app_32">32dp</dimen>
     <dimen name="minus_margin_main_act">-16dp</dimen>
     <dimen name="margin_frag_header">64dp</dimen>
+    <dimen name="btn_small_sizes">28dp</dimen>
+    <dimen name="btn_small_sizes_icon">20dp</dimen>
+    <dimen name="icon_main">40dp</dimen>
 </resources>

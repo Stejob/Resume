@@ -18,9 +18,9 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fadeScrollbars="false"
                 android:layout_marginStart="@dimen/margin_app_large"
-                android:layout_marginEnd="@dimen/margin_app_large"
-                android:fadeScrollbars="false">
+                android:layout_marginEnd="@dimen/margin_app_large">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -31,106 +31,100 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/margin_app_very_low"
-                        android:justificationMode="inter_word"
                         android:lineSpacingExtra="@dimen/line_spacing"
-                        android:text="@string/career_objective" />
+                        android:text="@string/career_objective"
+                        android:justificationMode="inter_word"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"/>
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_app_very_low">
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_done_24" />
-
+                            android:src="@drawable/ic_done_24"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/highlights_item_0" />
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_0"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_app_very_low">
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_done_24" />
-
+                            android:src="@drawable/ic_done_24"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/highlights_item_1" />
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_1"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_app_very_low">
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_done_24" />
-
+                            android:src="@drawable/ic_done_24"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/highlights_item_2" />
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_2"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_app_very_low">
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_done_24" />
-
+                            android:src="@drawable/ic_done_24"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/highlights_item_3" />
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_3"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_app_very_low">
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_done_24" />
-
+                            android:src="@drawable/ic_done_24"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/highlights_item_4" />
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_4"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_app_very_low">
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_done_24" />
-
+                            android:src="@drawable/ic_done_24"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/highlights_item_5" />
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_5"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -138,11 +132,11 @@
             </ScrollView>
 
         </RelativeLayout>
-    
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/second_frag_header"
+            android:text="@string/first_frag_header"
             android:textStyle="bold"
             android:textColor="@color/text_header_color"
             android:background="?android:colorBackground"
@@ -152,18 +146,18 @@
             android:paddingRight="@dimen/padding_app_normal"/>
 
         <ImageView
-            android:id="@+id/icon"
             android:layout_width="@dimen/iv_icon_size"
             android:layout_height="@dimen/iv_icon_size"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_app_very_large"
+            android:id="@+id/icon"
             android:background="@drawable/bg_icon_fragment"
-            android:paddingLeft="@dimen/padding_app_low"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_person_pin_40"
+            android:layout_marginLeft="@dimen/margin_app_very_large"
             android:paddingTop="7dp"
             android:paddingRight="@dimen/padding_app_low"
+            android:paddingLeft="@dimen/padding_app_low"
             android:paddingBottom="@dimen/padding_app_low"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_highlight_24" />
+            android:scaleType="fitCenter"/>
 
     </RelativeLayout>
 

@@ -10,10 +10,11 @@
     <string name="career_objective">A forward-thinking developer offering more than 3 years of experience in building, integrating, testing and supporting Android applications for  mobile and tablet devices on the Android platform with benefit of Industrial engineering experiences. I am always looking to achieve client  satisfaction to earn long term business.</string>
     <string name="txt_splash_act">" Stejob  "</string>
     <string name="first_frag_header">HIGHLIGHTS</string>
-    <string name="second_frag_header">CAREER</string>
-    <string name="third_frag_header">HIGHLIGHTS</string>
-    <string name="forth_frag_header">HIGHLIGHTS</string>
-    <string name="fifth_frag_header">HIGHLIGHTS</string>
+    <string name="second_frag_header">PROFESSIONAL DEV. EXPERIENCES</string>
+    <string name="third_frag_header">EDUCATIONS AND CERTIFICATIONS</string>
+    <string name="forth_frag_header">OTHER EXPERIENCES AND SKILLS</string>
+    <string name="fifth_frag_header">PERSONAL DETAIL</string>
+    <string name="sixth_frag_header">PERSONAL DETAIL</string>
 
     <!--Highlights items-->
     <string name="highlights_item_0"> Created 6+ fully functional applications for Android devices</string>
@@ -23,6 +24,38 @@
     <string name="highlights_item_4"> Proficient in design, data structures, problem-solving, and debugging</string>
     <string name="highlights_item_5"> Expert in the interaction between various devices and versions  of Android</string>
 
+    <!--project details-->
+    <string name="project_cyrcles_pay_header">CYRCLES PAY project (USA)</string>
+    <string name="project_mw_header">MW project (my own startup)</string>
+    <string name="project_anypal_header">ANYPAL project</string>
+    <string name="project_shano_header">SHANO project</string>
+    <string name="project_sic_header">SIC project</string>
 
+    <string name="project_proceedings">Proceedings</string>
+    <string name="project_descriptions">Descriptions</string>
+    <string name="project_features">Features</string>
+
+    <string name="project_cyrcles_pay_proceedings">cooperating remotely with Rodex Co. in CyrclesPay project as an android developer.</string>
+    <string name="project_cyrcles_pay_descriptions">CyrclesPay is an application for Payments and financial transactions.</string>
+    <string name="project_cyrcles_pay_features">utilization of Dev.Azure for remote project management.</string>
+    <string name="project_mw_proceedings">provided startup idea, business planning, UI/UX designing, android coding, Server-side scripting in PHP, database designing and structuring in MySQL.</string>
+    <string name="project_mw_descriptions">startup to invite and manage guests in special occasions and ceremonies.</string>
+    <string name="project_mw_features">includes a variety of applications (inviting guests, guest management and system management), utilization of MVVM architecture, using a variety of libraries such as retrofit2, capable of creating and reading QRcodes, utilization of visual charts, using various animations in UI to deliver a simple user-friendly UI/UX.</string>
+    <string name="project_anypal_proceedings">cooperating with Arman Negaran Fanavar Pars Co. in Anypal project led by android development team.</string>
+    <string name="project_anypal_descriptions">Anypal is a startup application for introducing businesses and making secure payment systems.</string>
+    <string name="project_anypal_features">utilization of Gitlab and Trello for remote project management,  in remote collaboration with other team members.</string>
+    <string name="project_shano_proceedings">UI/UX designing, android coding, Server-side scripting in PHP, database designing related to project in MySQL.</string>
+    <string name="project_shano_descriptions">inventory Control, purchase and sales management application for Shano lingerie store.</string>
+    <string name="project_shano_features">utilization of MVVM architecture, using different libraries such as retrofit2 and etc., utilization of visual charts, using various animations in UI to deliver a simple user friendly UI/UX.</string>
+    <string name="project_sic_proceedings">developed application for Tadbir Garan Novin   Fars Co. including UI/UX designing, android coding, Server-side scripting in PHP, database designing related to the project in MySQL.</string>
+    <string name="project_sic_descriptions">Smart ID Card application for providing maximum security for client site visits by technical staff of elevator firm.</string>
+    <string name="project_sic_features">utilization of MVVM architecture, using different libraries such as retrofit2, utilization of visual charts, using various animations in UI to deliver a simple user friendly UI/UX.</string>
+
+    <string name="colon">:</string>
+
+    <string name="personal_competencies_1"> Proven ability for self-learning and eager to take on new challenges</string>
+    <string name="personal_competencies_2"> Smart and creative in assigned responsibilities</string>
+    <string name="personal_competencies_3"> Highly organized with a creative flair for project work</string>
+    <string name="personal_competencies_4"> Contributing well to the development team</string>
 
 </resources>

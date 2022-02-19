@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        tools:context=".views.fragments.ProfessionalDeVExpFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_app_extra_large"
+            android:layout_marginTop="@dimen/margin_app_big"
+            android:layout_marginBottom="@dimen/margin_app_low"
+            android:background="@drawable/bd_view_pager">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_app_large"
+                android:layout_marginTop="@dimen/margin_app_large"
+                android:layout_marginEnd="@dimen/margin_app_large"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0.5dp"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:paddingLeft="@dimen/padding_app_large"
+                android:paddingRight="@dimen/padding_app_large"
+                android:paddingBottom="@dimen/margin_app_large" />
+
+        </RelativeLayout>
+    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/second_frag_header"
+            android:textStyle="bold"
+            android:textColor="@color/text_header_color"
+            android:background="?android:colorBackground"
+            android:id="@+id/txt_header"
+            android:layout_marginStart="@dimen/margin_frag_header"
+            android:paddingLeft="@dimen/padding_app_normal"
+            android:paddingRight="@dimen/padding_app_normal"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/iv_icon_size"
+            android:layout_height="@dimen/iv_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_app_very_large"
+            android:background="@drawable/bg_icon_fragment"
+            android:paddingLeft="@dimen/padding_app_low"
+            android:paddingTop="@dimen/padding_app_low"
+            android:paddingRight="@dimen/padding_app_low"
+            android:paddingBottom="@dimen/padding_app_low"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_highlight_40" />
+
+    </RelativeLayout>
+
+</layout>
