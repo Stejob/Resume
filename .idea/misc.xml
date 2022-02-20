@@ -11,25 +11,34 @@
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_adb_48.xml" value="0.11302083333333333" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_android_48.xml" value="0.1" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_done_24.xml" value="0.1125" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_download_20.xml" value="0.15" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_download_24.xml" value="0.1527777777777778" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_email_24.xml" value="0.11302083333333333" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_exit_to_app_20.xml" value="0.15" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_facebook_48.xml" value="0.1648148148148148" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_highlight_24.xml" value="0.1" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_highlight_40.xml" value="0.15" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_image_20.xml" value="0.15" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_image_24.xml" value="0.1527777777777778" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_location_on_24.xml" value="0.1648148148148148" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_origin_24.xml" value="0.1527777777777778" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_person_pin_24.xml" value="0.13914473684210527" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_phone_forwarded.xml" value="0.1" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_read_more_20.xml" value="0.15" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_read_more_24.xml" value="0.1527777777777778" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/drawable/ic_stars_24.xml" value="0.1125" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/layout-sw320dp/activity_main.xml" value="0.1716485507246377" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/layout-sw360dp/activity_main.xml" value="0.1716485507246377" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout-sw720dp-notlong/activity_main.xml" value="0.1" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/activity_spash_screen.xml" value="0.14" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/activity_splash.xml" value="0.16032608695652173" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_Professional_dev_exp.xml" value="0.17617753623188406" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_career.xml" value="0.18" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_certification.xml" value="0.1" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_highlights.xml" value="0.17708333333333334" />
-        <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_personal_detail.xml" value="0.33" />
+        <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_personal_detail.xml" value="0.2878411910669975" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/fragment_pro_dev_exp.xml" value="0.1716485507246377" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/layout_projects.xml" value="0.33" />
         <entry key="..\:/Reza/MyResume/app/src/main/res/layout/layout_projects_detail.xml" value="0.17617753623188406" />

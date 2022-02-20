@@ -3,4 +3,5 @@
     <color name="line_color">@color/white</color>
     <color name="frag_header_back_color">@color/black</color>
     <color name="text_header_color">@color/white</color>
+    <color name="color_negative_dark">@color/white</color>
 </resources>

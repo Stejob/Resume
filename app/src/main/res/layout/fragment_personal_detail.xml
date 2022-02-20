@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+    <data>
+        <variable
+            name="onClick"
+            type="com.example.myresume.interfaces.OnSixFragBtnClick" />
+    </data>
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".views.fragments.PersonalDetailFragment">
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -92,6 +96,314 @@
                             android:layout_height="wrap_content"
                             android:text="@string/personal_competencies_4"/>
                     </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_large">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_email_24" />
+
+                            <TextView
+                                android:id="@+id/txt_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                                android:text="@string/email" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_email"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_phone_forwarded"
+                                android:layout_marginEnd="@dimen/margin_app_low"/>
+
+                            <TextView
+                                android:id="@+id/txt_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/phone_number"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_phone"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_location_on_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"/>
+
+                            <TextView
+                                android:id="@+id/txt_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/location"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_location"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/d_24"
+                                android:layout_height="@dimen/d_24"
+                                android:src="@drawable/ic_github_48"
+                                android:layout_marginEnd="@dimen/margin_app_low"/>
+
+                            <TextView
+                                android:id="@+id/txt_github"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/github"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_github"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/d_24"
+                                android:layout_height="@dimen/d_24"
+                                android:src="@drawable/ic_stack_overflow_48"
+                                android:layout_marginEnd="@dimen/margin_app_low"/>
+
+                            <TextView
+                                android:id="@+id/txt_stackoverflow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/stackoverflow"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_stackoverflow"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/d_24"
+                                android:layout_height="@dimen/d_24"
+                                android:src="@drawable/ic_linked_in_48"
+                                android:layout_marginEnd="@dimen/margin_app_low"/>
+
+                            <TextView
+                                android:id="@+id/txt_linked_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/linked_in"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_linked_in"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/d_24"
+                                android:layout_height="@dimen/d_24"
+                                android:src="@drawable/ic_facebook_48"
+                                android:layout_marginEnd="@dimen/margin_app_low"/>
+
+                            <TextView
+                                android:id="@+id/txt_facebook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/facebook"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:onClick="@{(view) -> onClick.onClickListener(view.id)}"/>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_facebook"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> onClick.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 

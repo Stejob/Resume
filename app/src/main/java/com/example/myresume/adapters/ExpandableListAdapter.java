@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,7 +30,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Map<String, List<ProjectDetailModel>> projectDetail;
     private List<String> projects;
 
-    private OnItemClicked onItemClicked;
     private LayoutProjectsBinding mlBinding;
     private LayoutProjectsDetailBinding mldBinding;
 
@@ -101,6 +101,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             viewHolder = (ViewHolder) view.getTag();
         }
         viewHolder.txtHeader.setText(getGroup(i).toString());
+        viewHolder.btnImage.setFocusable(false);
+        viewHolder.btnDownload.setFocusable(false);
         //viewHolder.btnImage.setOnClickListener(new OnClickListener());
         return view;
     }
@@ -136,13 +138,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         return true;
     }
 
-    public interface OnItemClicked{
-        void onItemClickedListener(View view);
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView txtHeader;
-        public ImageView btnDownload, btnImage;
+        public ImageButton btnDownload, btnImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtHeader = itemView.findViewById(R.id.txt_project_name);
@@ -151,7 +149,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }
     }
 
-    public class ChildViewHolder extends RecyclerView.ViewHolder{
+    public static class ChildViewHolder extends RecyclerView.ViewHolder{
         public TextView txtProjectDetailHeader, txtProjectDetail;
         public ChildViewHolder(@NonNull View itemView) {
             super(itemView);

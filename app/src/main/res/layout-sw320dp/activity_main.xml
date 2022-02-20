@@ -20,18 +20,18 @@
         <ImageView
             android:id="@+id/header_cover_image"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerCrop"
             app:imageUrl="@{utils.mainActHeaderImageUrl}" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_pic"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_below="@+id/header_cover_image"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="-130dp"
+            android:layout_marginTop="-80dp"
             android:clickable="true"
             android:elevation="5dp"
             android:padding="20dp"
@@ -76,42 +76,42 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageButton
-                    android:layout_width="@dimen/btn_main_size"
-                    android:layout_height="@dimen/btn_main_size"
                     android:id="@+id/btn_1"
-                    android:background="@drawable/btn_mian_act"
-                    android:elevation="@dimen/cardview_default_elevation"
-                    android:layout_margin="@dimen/main_act_btns_margin"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_person_pin_40"
-                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[0])}"/>
-
-                <ImageButton
                     android:layout_width="@dimen/btn_main_size"
                     android:layout_height="@dimen/btn_main_size"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_act_btns_margin"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[0])}"
+                    android:src="@drawable/ic_person_pin_40" />
+
+                <ImageButton
                     android:id="@+id/btn_2"
-                    android:background="@drawable/btn_mian_act"
-                    android:elevation="@dimen/cardview_default_elevation"
-                    android:layout_margin="@dimen/main_act_btns_margin"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_highlight_40"
-                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[1])}"/>
-
-                <ImageButton
                     android:layout_width="@dimen/btn_main_size"
                     android:layout_height="@dimen/btn_main_size"
-                    android:id="@+id/btn3"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
-                    android:layout_margin="@dimen/main_act_btns_margin"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[1])}"
+                    android:src="@drawable/ic_highlight_40" />
+
+                <ImageButton
+                    android:id="@+id/btn3"
+                    android:layout_width="@dimen/btn_main_size"
+                    android:layout_height="@dimen/btn_main_size"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_adb_40"
-                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[2])}"/>
+                    android:layout_margin="@dimen/main_act_btns_margin"
+                    android:background="@drawable/btn_mian_act"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[2])}"
+                    android:src="@drawable/ic_adb_40" />
 
             </LinearLayout>
 

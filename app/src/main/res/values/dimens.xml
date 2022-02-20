@@ -18,6 +18,7 @@
     <dimen name="margin_app_very_large">16dp</dimen>
     <dimen name="margin_app_extra_large">40dp</dimen>
     <dimen name="iv_icon_size">48dp</dimen>
+    <dimen name="view_pager_margin_button_main_act">240dp</dimen><!--iv_icon_size * 2 +  main_act_btns_margin *3-->
 
     <dimen name="margin_app_32">32dp</dimen>
     <dimen name="minus_margin_main_act">-16dp</dimen>
@@ -25,4 +26,8 @@
     <dimen name="btn_small_sizes">28dp</dimen>
     <dimen name="btn_small_sizes_icon">20dp</dimen>
     <dimen name="icon_main">40dp</dimen>
+    <dimen name="btn_main_size">80dp</dimen>
+    <dimen name="main_act_btns_margin">16dp</dimen>
+    <dimen name="margin_start_expandable_list_view">32dp</dimen>
+    <dimen name="d_24">24dp</dimen>
 </resources>

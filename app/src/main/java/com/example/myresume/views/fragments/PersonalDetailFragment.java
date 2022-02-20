@@ -1,9 +1,11 @@
 package com.example.myresume.views.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,51 +13,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myresume.R;
+import com.example.myresume.databinding.FragmentPersonalDetailBinding;
+import com.example.myresume.interfaces.OnSixFragBtnClick;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PersonalDetailFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class PersonalDetailFragment extends Fragment {
+import java.util.Locale;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class PersonalDetailFragment extends Fragment implements OnSixFragBtnClick {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    FragmentPersonalDetailBinding mBinding;
     public PersonalDetailFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PersonalDetailFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PersonalDetailFragment newInstance(String param1, String param2) {
-        PersonalDetailFragment fragment = new PersonalDetailFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -63,16 +35,19 @@ public class PersonalDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_personal_detail, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_personal_detail, container, false);
+        View view = mBinding.getRoot();
+        mBinding.setOnClick(this);
+        return view;
     }
 
 
-    public void callMe(View view) {
+    public void callMe() {
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.phone_number)));
         startActivity(intent);
     }
 
-    public void emailMe(View view) {
+    public void emailMe() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] { getResources().getString(R.string.email)});
@@ -81,8 +56,49 @@ public class PersonalDetailFragment extends Fragment {
         startActivity(Intent.createChooser(intent, ""));
     }
 
-    public void locateMe(View view) {
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.location_on_map)));
+    public void locateMe() {
+        String uri = String.format(Locale.US, "geo:%f,%f", 3.1945992936520997, 101.73609188181749);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
         startActivity(intent);
+    }
+
+    public void openWebAddress(String address){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
+        startActivity(browserIntent);
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClickListener(int id) {
+        switch (id){
+            case R.id.txt_email:
+            case R.id.btn_go_to_email:
+                emailMe();
+                break;
+            case R.id.txt_phone:
+            case R.id.btn_go_to_phone:
+                callMe();
+                break;
+            case R.id.txt_location:
+            case R.id.btn_go_to_location:
+                locateMe();
+                break;
+            case R.id.txt_github:
+            case R.id.btn_go_to_github:
+                openWebAddress(getResources().getString(R.string.github_address));
+                break;
+            case R.id.txt_stackoverflow:
+            case R.id.btn_go_to_stackoverflow:
+                openWebAddress(getResources().getString(R.string.stack_overflow_address));
+                break;
+            case R.id.txt_facebook:
+            case R.id.btn_go_to_facebook:
+                openWebAddress(getResources().getString(R.string.facebook_address));
+                break;
+            case R.id.txt_linked_in:
+            case R.id.btn_go_to_linked_in:
+                openWebAddress(getResources().getString(R.string.linkedin_address));
+                break;
+        }
     }
 }
