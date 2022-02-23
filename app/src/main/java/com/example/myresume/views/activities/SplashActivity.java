@@ -3,6 +3,8 @@ package com.example.myresume.views.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +14,7 @@ import android.view.animation.AnimationUtils;
 
 import com.example.myresume.R;
 import com.example.myresume.databinding.ActivitySplashBinding;
+import com.example.myresume.utils.Utils;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -36,10 +39,10 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                new Handler().postDelayed(() -> {
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                    SplashActivity.this.finish();
-                }, 2000);
+                if(!Utils.isInternetConnected(SplashActivity.this)){
+                    Utils.showInternetDialog(SplashActivity.this);
+                }
+                startMainActivity();
             }
 
             @Override
@@ -47,6 +50,14 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void startMainActivity() {
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            SplashActivity.this.finish();
+        }, 2000);
+
     }
 
     @Override

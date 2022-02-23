@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity
         implements OnMainActButtonClicks
         {
 
+            // TODO: check for different screen sizes
+
     ActivityMainBinding mBinding;
     FragmentViewPagerAdapter viewPagerAdapter;
     View previousBtn;

@@ -1,14 +1,530 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.fragments.EducationsFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="click"
+            type="com.example.myresume.interfaces.OnFragBtnClicks" />
+    </data>
+
+    <RelativeLayout
+        tools:context=".views.fragments.EducationsFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_app_extra_large"
+            android:layout_marginTop="@dimen/margin_app_big"
+            android:layout_marginBottom="@dimen/margin_app_low"
+            android:background="@drawable/bd_view_pager">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_app_large"
+                android:layout_marginEnd="@dimen/margin_app_large"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_app_large">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_android" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_width"
+                            android:background="@color/color_negative_dark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_play_arrow_24"
+                            android:layout_marginEnd="@dimen/margin_app_low"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_android_date_1"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_go_to_school_1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_school_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_android_school_1"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_school_1"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_show_android_1_degree"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_android_degree_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_android_title_1"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_show_android_1_degree"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_image_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_play_arrow_24"
+                            android:layout_marginEnd="@dimen/margin_app_low"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_android_date_2"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_go_to_school_2"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_school_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_android_school_2"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btn_go_to_school_2"
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/margin_app_very_low"
+                            android:layout_marginTop="@dimen/margin_app_very_low"
+                            android:layout_marginEnd="@dimen/margin_app_very_low"
+                            android:layout_marginBottom="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:focusable="false"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                            android:padding="@dimen/padding_app_low"
+                            android:src="@drawable/ic_exit_to_app_20" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_show_android_2_degree"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_android_degree_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_android_title_2"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_show_android_2_degree"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_image_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                <!--bottom layout-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_industrial_engineering" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_width"
+                            android:background="@color/color_negative_dark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_play_arrow_24"
+                            android:layout_marginEnd="@dimen/margin_app_low"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_industrial_engineering_date_1"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_go_to_uni_1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_uni_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_industrial_engineering_school_1"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_uni_1"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_show_engineering_1_degree"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_engineering_degree_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_industrial_engineering_title_1"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_show_engineering_1_degree"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_image_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_app_low">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_play_arrow_24"
+                            android:layout_marginEnd="@dimen/margin_app_low"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_industrial_engineering_date_2"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_go_to_uni_2"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:id="@+id/txt_uni_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/education_industrial_engineering_school_2"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}"/>
+
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_go_to_uni_2"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_exit_to_app_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@id/btn_show_engineering_2_degree"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_app_low"
+                                    android:src="@drawable/ic_remove_20" />
+                                <TextView
+                                    android:id="@+id/txt_engineering_degree_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/education_industrial_engineering_title_2"
+                                    />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_small_sizes"
+                            android:layout_height="@dimen/btn_small_sizes"
+                            android:id="@+id/btn_show_engineering_2_degree"
+                            android:layout_margin="@dimen/margin_app_very_low"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_image_20"
+                            android:focusable="false"
+                            android:elevation="@dimen/cardview_default_elevation"
+                            android:padding="@dimen/padding_app_low"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="invisible"
+                            />
+
+                </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third_frag_header"
+            android:textStyle="bold"
+            android:textColor="@color/text_header_color"
+            android:background="?android:colorBackground"
+            android:id="@+id/txt_header"
+            android:layout_marginStart="@dimen/margin_frag_header"
+            android:paddingLeft="@dimen/padding_app_normal"
+            android:paddingRight="@dimen/padding_app_normal"/>
+
+        <ImageView
+            android:layout_width="@dimen/iv_icon_size"
+            android:layout_height="@dimen/iv_icon_size"
+            android:id="@+id/icon"
+            android:background="@drawable/bg_icon_fragment"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_person_pin_40"
+            android:layout_marginLeft="@dimen/margin_app_very_large"
+            android:paddingTop="7dp"
+            android:paddingRight="@dimen/padding_app_low"
+            android:paddingLeft="@dimen/padding_app_low"
+            android:paddingBottom="@dimen/padding_app_low"
+            android:scaleType="fitCenter"/>
+
+    </RelativeLayout>
+
+</layout>

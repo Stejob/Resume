@@ -3,7 +3,7 @@
     <data>
         <variable
             name="onClick"
-            type="com.example.myresume.interfaces.OnSixFragBtnClick" />
+            type="com.example.myresume.interfaces.OnFragBtnClicks" />
     </data>
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

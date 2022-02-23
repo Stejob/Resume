@@ -14,11 +14,11 @@ import android.view.ViewGroup;
 
 import com.example.myresume.R;
 import com.example.myresume.databinding.FragmentPersonalDetailBinding;
-import com.example.myresume.interfaces.OnSixFragBtnClick;
+import com.example.myresume.interfaces.OnFragBtnClicks;
 
 import java.util.Locale;
 
-public class PersonalDetailFragment extends Fragment implements OnSixFragBtnClick {
+public class PersonalDetailFragment extends Fragment implements OnFragBtnClicks {
 
     FragmentPersonalDetailBinding mBinding;
     public PersonalDetailFragment() {

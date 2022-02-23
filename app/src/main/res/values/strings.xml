@@ -8,6 +8,25 @@
     <string name="linkedin_address" formatted="false">https://www.linkedin.com/in/reza-stejob-821a5b2</string>
     <string name="facebook_address" formatted="false">https://www.facebook.com/profile.php?id=100077567395633</string>
 
+    <string name="simi" formatted="false">"https://www.simi.ir/?lang=en"</string>
+    <string name="uni" formatted="false">"https://www.iaushiraz.ac.ir/en/2"</string>
+
+    <string name="uni_degree_web_address" formatted="false">http://www.stjobs.ir/Certifications/degreeSite.jpg</string>
+    <string name="android_newer_degree_web_address" formatted="false">http://www.stjobs.ir/Certifications/android2Site.jpg</string>
+    <string name="android_older_degree_web_address" formatted="false">http://www.stjobs.ir/Certifications/android1Site.jpg</string>
+    <string name="six_sigma_degree_web_address_crtf_1" formatted="false">http://www.stjobs.ir/Certifications/sixSigmaSite.jpg</string>
+    <string name="iso_degree_web_address_crtf_2" formatted="false">http://www.stjobs.ir/Certifications/isoSite.jpg</string>
+    <string name="ims_degree_web_address_crtf_3" formatted="false">http://www.stjobs.ir/Certifications/IMSSite.jpg</string>
+    <string name="primavera_degree_web_address_crtf_4" formatted="false">http://www.stjobs.ir/Certifications/primaveraSite.jpg</string>
+
+    <string name="dashboard_web_address_work_sample_1" formatted="false">http://www.stjobs.ir/worksamples/StejobDashboard.jpg</string>
+    <string name="table_web_address_work_sample_2" formatted="false">http://www.stjobs.ir/worksamples/StejobTable.jpg</string>
+    <string name="report_web_address_work_sample_3" formatted="false">http://www.stjobs.ir/worksamples/StejobReport.jpg</string>
+    <string name="dashboard_web_address_header_1" formatted="false">Dashboard work sample</string>
+    <string name="table_web_address_header_2" formatted="false">Table work sample</string>
+    <string name="report_web_address_header_3" formatted="false">Pivot table report work sample</string>
+
+
     <string name="email_response_subject">Reply from CV application</string>
     <string name="email_response_body">Dear Reza</string>
     <string name="location">C– 25– 09  VILLAWANGSAMAS  CONDO\nWANGSAM MAJU - KUALA LUMPUR</string>
@@ -17,8 +36,8 @@
     <string name="first_frag_header">HIGHLIGHTS</string>
     <string name="second_frag_header">PROFESSIONAL DEV. EXPERIENCES</string>
     <string name="third_frag_header">EDUCATIONS</string>
-    <string name="fifth_frag_header">EXPERIENCES</string>
-    <string name="forth_frag_header">OTHER SKILLS AND CERTIFICATIONS</string>
+    <string name="forth_frag_header">OTHER EXPERIENCES AND SKILLS</string>
+    <string name="fifth_frag_header">CERTIFICATIONS</string>
     <string name="sixth_frag_header">PERSONAL DETAIL</string>
 
     <!--Highlights items-->
@@ -66,7 +85,56 @@
     <string name="stackoverflow">My StackOverlow profile</string>
     <string name="linked_in">My LinkedIn profile</string>
     <string name="facebook">My Facebook profile</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="education_android">Android development</string>
+    <string name="education_android_date_1">Dec 2017 – Jul 2018</string>
+    <string name="education_android_school_1">South Industrial Management Institute, Shiraz Iran</string>
+    <string name="education_android_title_1">Android programming with score of 90 of 100</string>
+    <string name="education_android_date_2">Sep 2016 – Jun 2017</string>
+    <string name="education_android_school_2">South Industrial Management Institute, Shiraz Iran</string>
+    <string name="education_android_title_2">Android Mobile App Development &amp; Java with score of 90 of 100</string>
+
+    <string name="education_industrial_engineering">Industrial engineering</string>
+    <string name="education_industrial_engineering_date_1">Sep 2014 – Sep 2017</string>
+    <string name="education_industrial_engineering_school_1">Shiraz Azad university, Shiraz Iran</string>
+    <string name="education_industrial_engineering_title_1">Master in Industrial engineering majoring in Industries</string>
+    <string name="education_industrial_engineering_date_2">Sep 2007 – Dec 2011</string>
+    <string name="education_industrial_engineering_school_2">Shiraz Azad university, Shiraz Iran</string>
+    <string name="education_industrial_engineering_title_2">Bachelor of Industrial engineering majoring in systems planning and analysis</string>
+
+    <string name="other_experiences_header">Other experiences</string>
+    <string name="other_experiences_date_1">Apr 2015 – Dec 2021</string>
+    <string name="other_experiences_exp_1">TAKS Co, Shiraz Iran | Planning &amp; budget expert</string>
+    <string name="other_experiences_date_2">Apr 2014 – Apr 2015</string>
+    <string name="other_experiences_exp_2">Sadr Co, Shiraz Iran | Planning &amp; budget expert</string>
+    <string name="other_experiences_date_3">Nov 2012 – Apr 2014</string>
+    <string name="other_experiences_exp_3">Sadr Co, Shiraz Iran | QC expert</string>
+    <string name="other_experiences_date_4">Jul 2009 – Feb 2010</string>
+    <string name="other_experiences_exp_4">Shayan-tarh, Shiraz Iran | Warehouse operator</string>
+    
+    <string name="other_skills_header">Other skills</string>
+    <string name="other_skills_1">Microsoft Office | Advanced</string>
+    <string name="other_skills_1_sub_skill">particularly in Excel</string>
+    <string name="other_skills_2">Adobe photo shop | Advanced</string>
+    <string name="other_skills_3">Adobe premiere pro | Advanced</string>
+    <string name="other_skills_4">Microsoft Office Visio | Advanced</string>
+    <string name="other_skills_5">Microsoft project | Advanced</string>
+    <string name="other_skills_6">Primavera P6 | Advanced</string>
+    <string name="other_skills_7">AutoCAD | intermediate</string>
+
+    <string name="language_skills_header">Language Skills</string>
+    <string name="language_skills_1">English(fluent)</string>
+    <string name="language_skills_2">Persian (native)</string>
+
+    <string name="teaching_exp_header">Teaching experience</string>
+    <string name="teaching_exp_1">Design of experiment (DOE) | Sadr Co. Shiraz Iran</string>
+    <string name="teaching_exp_2">Technical drawing | Azad University Shiraz Iran</string>
+
+    <string name="certification_1">Six Sigma yellow belt | TÜV Germany</string>
+    <string name="certification_2">ISO 9001:2008 South Industrial Management Institute</string>
+    <string name="certification_3">IMS (ISO 9001:2008 ISO 14001:2008 OHSAS) | Sadr Co.</string>
+    <string name="certification_4">Primavera P6 Project Portfolio Management | South Industrial Management Institute</string>
+    <string name="check_internet_connection">Please check your internet connection.</string>
+    <string name="ok">Ok</string>
 
 </resources>

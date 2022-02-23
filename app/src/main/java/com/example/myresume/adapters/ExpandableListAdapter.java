@@ -135,7 +135,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int i, int i1) {
-        return true;
+        return false;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{

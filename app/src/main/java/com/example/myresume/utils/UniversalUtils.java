@@ -14,12 +14,21 @@ public class UniversalUtils {
     public static final int mainActHeaderImageUrl = R.drawable.nav_menu_header_bg_blue;
     public static final int mainActMyImageUrl = R.drawable.reza;
     public static final int HIGHLIGHTS = 0;
-    public static final int PROFESSIONAL_DEC_EXPERIENCES = 1;
-    public static final int PERSONAL_DETAIL = 2;
+    public static final int PROFESSIONAL_DEV_EXPERIENCES = 1;
+    public static final int EDUCATIONS = 2;
+    public static final int OTHER_EXP_SKILLS = 3;
+    public static final int CERTIFICATIONS = 4;
+    public static final int PERSONAL_DETAIL = 5;
 
-    public static final int [] SECTIONS = {HIGHLIGHTS, PROFESSIONAL_DEC_EXPERIENCES,
-            PERSONAL_DETAIL, 3,
-            4, 5};
+    public static final int [] SECTIONS = {HIGHLIGHTS, PROFESSIONAL_DEV_EXPERIENCES,
+            EDUCATIONS, OTHER_EXP_SKILLS,
+            CERTIFICATIONS, PERSONAL_DETAIL};
+
+    public static final String OTHER_TAG= "-1";
+    public static final String CERTIFICATION_TAG_1= "0";
+    public static final String CERTIFICATION_TAG_2= "1";
+    public static final String CERTIFICATION_TAG_3= "2";
+    public static final String CERTIFICATION_TAG_4= "3";
 
     public static Map<String, List<ProjectDetailModel>> getProjectDetail(Context context){
         Map<String, List<ProjectDetailModel>> projectDetails = new LinkedHashMap<>();
