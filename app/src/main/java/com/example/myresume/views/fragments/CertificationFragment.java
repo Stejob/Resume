@@ -51,6 +51,7 @@ public class CertificationFragment extends Fragment implements OnFragBtnClicks {
                              Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_certification, container, false);
         View view = mBinding.getRoot();
+        GlideBindingAdapter.setImageIcon(mBinding.icon, UniversalUtils.CERTIFICATIONS_IMAGE_URL);
         mBinding.setOnClick(this);
         GlideBindingAdapter.setImageResource(mBinding.imgCrtf1, getContext().getString(R.string.six_sigma_degree_web_address_crtf_1));
         GlideBindingAdapter.setImageResource(mBinding.imgCrtf2, getContext().getString(R.string.iso_degree_web_address_crtf_2));

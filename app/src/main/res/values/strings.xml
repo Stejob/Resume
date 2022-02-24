@@ -8,6 +8,11 @@
     <string name="linkedin_address" formatted="false">https://www.linkedin.com/in/reza-stejob-821a5b2</string>
     <string name="facebook_address" formatted="false">https://www.facebook.com/profile.php?id=100077567395633</string>
 
+    <string name="mw_guest_download_link" formatted="false">http://www.stjobs.ir/MyWeddingInvitationSite/download/invitedApp/InvitationAppMW.apk</string>
+    <string name="mw_main_download_link" formatted="false">http://www.stjobs.ir/MyWeddingInvitationSite/download/invitedApp/BaseAppMW.apk</string>
+    <string name="sic_download_link" formatted="false">http://www.tadbirgaranfars.ir/smart-visit-card/download/tadbirgaran.apk</string>
+    <string name="shano_download_link" formatted="false">http://www.stjobs.ir/shano/download/shaano-compact.apk</string>
+
     <string name="simi" formatted="false">"https://www.simi.ir/?lang=en"</string>
     <string name="uni" formatted="false">"https://www.iaushiraz.ac.ir/en/2"</string>
 
@@ -26,6 +31,34 @@
     <string name="table_web_address_header_2" formatted="false">Table work sample</string>
     <string name="report_web_address_header_3" formatted="false">Pivot table report work sample</string>
 
+    <string name="anypal_web_address_work_sample_1" formatted="false">http://www.stjobs.ir/worksamples/anypal/AnyPal1.jpg</string>
+    <string name="anypal_web_address_work_sample_2" formatted="false">http://www.stjobs.ir/worksamples/anypal/AnyPal2.jpg</string>
+    <string name="anypal_web_address_work_sample_3" formatted="false">http://www.stjobs.ir/worksamples/anypal/AnyPal3.jpg</string>
+    <string name="anypal_web_address_work_sample_4" formatted="false">http://www.stjobs.ir/worksamples/anypal/AnyPal4.jpg</string>
+
+    <string name="circles_web_address_work_sample_1" formatted="false">http://www.stjobs.ir/worksamples/circles/circles1.jpg</string>
+    <string name="circles_web_address_work_sample_2" formatted="false">http://www.stjobs.ir/worksamples/circles/circles2.jpg</string>
+    <string name="circles_web_address_work_sample_3" formatted="false">http://www.stjobs.ir/worksamples/circles/circles3.jpg</string>
+
+    <string name="mw_web_address_work_sample_1" formatted="false">http://www.stjobs.ir/worksamples/mw/mw1.jpg</string>
+    <string name="mw_web_address_work_sample_2" formatted="false">http://www.stjobs.ir/worksamples/mw/mw2.jpg</string>
+    <string name="mw_web_address_work_sample_3" formatted="false">http://www.stjobs.ir/worksamples/mw/mw3.jpg</string>
+    <string name="mw_web_address_work_sample_4" formatted="false">http://www.stjobs.ir/worksamples/mw/mw4.jpg</string>
+    <string name="mw_web_address_work_sample_5" formatted="false">http://www.stjobs.ir/worksamples/mw/mw5.jpg</string>
+    <string name="mw_web_address_work_sample_6" formatted="false">http://www.stjobs.ir/worksamples/mw/mw6.jpg</string>
+    <string name="mw_web_address_work_sample_7" formatted="false">http://www.stjobs.ir/worksamples/mw/mw7.jpg</string>
+    <string name="mw_web_address_work_sample_8" formatted="false">http://www.stjobs.ir/worksamples/mw/mw8.jpg</string>
+    <string name="mw_web_address_work_sample_9" formatted="false">http://www.stjobs.ir/worksamples/mw/mw9.jpg</string>
+    <string name="mw_web_address_work_sample_10" formatted="false">http://www.stjobs.ir/worksamples/mw/mw10.jpg</string>
+
+    <string name="shano_web_address_work_sample_1" formatted="false">http://www.stjobs.ir/worksamples/shano/shano1.jpg</string>
+    <string name="shano_web_address_work_sample_2" formatted="false">http://www.stjobs.ir/worksamples/shano/shano2.jpg</string>
+    <string name="shano_web_address_work_sample_3" formatted="false">http://www.stjobs.ir/worksamples/shano/shano3.jpg</string>
+    <string name="shano_web_address_work_sample_4" formatted="false">http://www.stjobs.ir/worksamples/shano/shano4.jpg</string>
+
+    <string name="sic_web_address_work_sample_1" formatted="false">http://www.stjobs.ir/worksamples/sic/sic1.jpg</string>
+    <string name="sic_web_address_work_sample_2" formatted="false">http://www.stjobs.ir/worksamples/sic/sic2.jpg</string>
+    <string name="sic_web_address_work_sample_3" formatted="false">http://www.stjobs.ir/worksamples/sic/sic3.jpg</string>
 
     <string name="email_response_subject">Reply from CV application</string>
     <string name="email_response_body">Dear Reza</string>
@@ -136,5 +169,10 @@
     <string name="certification_4">Primavera P6 Project Portfolio Management | South Industrial Management Institute</string>
     <string name="check_internet_connection">Please check your internet connection.</string>
     <string name="ok">Ok</string>
+    <string name="mw_openning_quastion">This project has 3 applications, you can download GuestApp and MainApp. MainControlPanelApp is not available for public download.</string>
+    <string name="txt_download_main_app">MainApp</string>
+    <string name="txt_download_guest_app">GuestApp</string>
+    <string name="cancel">cancel</string>
+    <string name="excuse">is not available for download! It belongs to its founder and I have developed some parts. you can see its screenshots or download my other applications.</string>
 
 </resources>

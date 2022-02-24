@@ -173,12 +173,8 @@
         android:id="@+id/icon"
         android:background="@drawable/bg_icon_fragment"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_person_pin_40"
         android:layout_marginLeft="@dimen/margin_app_very_large"
-        android:paddingTop="7dp"
-        android:paddingRight="@dimen/padding_app_low"
-        android:paddingLeft="@dimen/padding_app_low"
-        android:paddingBottom="@dimen/padding_app_low"
+        android:padding="@dimen/padding_app_normal"
         android:scaleType="fitCenter"/>
 
     </RelativeLayout>

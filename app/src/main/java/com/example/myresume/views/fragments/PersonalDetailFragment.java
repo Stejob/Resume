@@ -14,7 +14,9 @@ import android.view.ViewGroup;
 
 import com.example.myresume.R;
 import com.example.myresume.databinding.FragmentPersonalDetailBinding;
+import com.example.myresume.databinding.GlideBindingAdapter;
 import com.example.myresume.interfaces.OnFragBtnClicks;
+import com.example.myresume.utils.UniversalUtils;
 
 import java.util.Locale;
 
@@ -37,6 +39,7 @@ public class PersonalDetailFragment extends Fragment implements OnFragBtnClicks 
         // Inflate the layout for this fragment
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_personal_detail, container, false);
         View view = mBinding.getRoot();
+        GlideBindingAdapter.setImageIcon(mBinding.icon, UniversalUtils.PERSONAL_DETAIL_IMAGE_URL);
         mBinding.setOnClick(this);
         return view;
     }

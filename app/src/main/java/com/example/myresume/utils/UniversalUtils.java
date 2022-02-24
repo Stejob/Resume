@@ -11,8 +11,16 @@ import java.util.List;
 import java.util.Map;
 
 public class UniversalUtils {
-    public static final int mainActHeaderImageUrl = R.drawable.nav_menu_header_bg_blue;
-    public static final int mainActMyImageUrl = R.drawable.reza;
+    public static final int MAIN_ACT_HEADER_IMAGE_URL = R.drawable.nav_menu_header_bg_blue;
+    public static final int MAIN_ACT_MY_IMAGE_URL = R.drawable.reza;
+    public static final int HIGHLIGHTS_IMAGE_URL = R.drawable.ic_person_pin_40;
+    public static final int PROFESSIONAL_DEV_EXP_IMAGE_URL = R.drawable.icons8_android_os_96_white;
+    public static final int PERSONAL_DETAIL_IMAGE_URL = R.drawable.icons8_checked_identification_documents_100_white;
+    public static final int EDUCATIONS_IMAGE_URL = R.drawable.icons8_education_64_white;
+    public static final int OTHER_EXP_SKILLS_IMAGE_URL = R.drawable.icons8_world_256_white;
+    public static final int CERTIFICATIONS_IMAGE_URL = R.drawable.icons8_certificate_64_white;
+
+
     public static final int HIGHLIGHTS = 0;
     public static final int PROFESSIONAL_DEV_EXPERIENCES = 1;
     public static final int EDUCATIONS = 2;

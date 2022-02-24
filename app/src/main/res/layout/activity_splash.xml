@@ -6,8 +6,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#D3EAEAEA"
         tools:context=".views.activities.SplashActivity">
+
+
+        <!--android:background="#D3EAEAEA"-->
 
         <ImageView
             android:id="@+id/logo"
@@ -28,7 +30,7 @@
             android:layout_centerInParent="true"
             android:textSize="48sp"
             android:fontFamily="@font/itcedsrc"
-            android:textColor="@color/splash_text"
+            android:textColor="@color/color_negative_dark"
             android:visibility="invisible"/>
 
     </RelativeLayout>

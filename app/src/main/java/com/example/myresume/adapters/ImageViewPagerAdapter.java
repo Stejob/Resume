@@ -41,7 +41,7 @@ public class ImageViewPagerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_image_view_pager, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
-        new ZoomInZoomOut(viewHolder.image);
+        //new ZoomInZoomOut(viewHolder.image);
         return viewHolder;
     }
 

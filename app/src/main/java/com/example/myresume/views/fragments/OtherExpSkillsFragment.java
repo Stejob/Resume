@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.myresume.R;
 import com.example.myresume.databinding.FragmentOtherExpSkillsBinding;
+import com.example.myresume.databinding.GlideBindingAdapter;
 import com.example.myresume.interfaces.OnFragBtnClicks;
 import com.example.myresume.utils.UniversalUtils;
 import com.example.myresume.views.fragments.dialogFragment.ImageViewerDialogFragment;
@@ -43,6 +44,7 @@ public class OtherExpSkillsFragment extends Fragment implements OnFragBtnClicks 
         // Inflate the layout for this fragment
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_other_exp_skills, container, false);
         View view = mBinding.getRoot();
+        GlideBindingAdapter.setImageIcon(mBinding.icon, UniversalUtils.OTHER_EXP_SKILLS_IMAGE_URL);
         mBinding.setClick(this);
         return view;
     }

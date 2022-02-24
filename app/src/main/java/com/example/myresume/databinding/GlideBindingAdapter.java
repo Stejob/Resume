@@ -22,17 +22,32 @@ public class GlideBindingAdapter {
     public static void setImageResource (ImageView view, int resourceId){
         Context context = view.getContext();
 /*        RequestOptions options = new RequestOptions()
+                .centerInside()
                 .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher);*/
         Glide.with(context)
-                //.setDefaultRequestOptions(options)
                 .load(resourceId)
                 .into(view);
     }
 
+
+    @BindingAdapter("imageCircleUrl")
     public static void setImageResource (CircleImageView view, int resourceId){
         Context context = view.getContext();
         RequestOptions options = new RequestOptions()
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.ic_launcher);
+        Glide.with(context)
+                .setDefaultRequestOptions(options)
+                .load(resourceId)
+                .into(view);
+    }
+
+    @BindingAdapter("iconUrl")
+    public static void setImageIcon (ImageView view, int resourceId){
+        Context context = view.getContext();
+        RequestOptions options = new RequestOptions()
+                .fitCenter()
                 .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher);
         Glide.with(context)

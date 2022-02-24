@@ -9,9 +9,11 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myresume.R;
@@ -19,6 +21,7 @@ import com.example.myresume.databinding.LayoutProjectsBinding;
 import com.example.myresume.databinding.LayoutProjectsDetailBinding;
 import com.example.myresume.generated.callback.OnClickListener;
 import com.example.myresume.models.ProjectDetailModel;
+import com.example.myresume.views.fragments.ProfessionalDeVExpFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,11 +35,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private LayoutProjectsBinding mlBinding;
     private LayoutProjectsDetailBinding mldBinding;
+    private Fragment fragment;
 
-    public ExpandableListAdapter(Context context, Map<String, List<ProjectDetailModel>> projectDetail) {
+    public ExpandableListAdapter(Context context, Map<String, List<ProjectDetailModel>> projectDetail, Fragment instance) {
         this.context = context;
         this.projectDetail = projectDetail;
         projects = new ArrayList<>(projectDetail.keySet());
+        fragment = instance;
     }
 
     @Override
@@ -76,19 +81,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-/*        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            mlBinding = DataBindingUtil.inflate(inflater, R.layout.layout_projects, viewGroup, false);
-            view = mlBinding.getRoot();
-        }
-        mlBinding.txtProjectName.setText((String) getGroup(i));
-        mlBinding.txtProjectName.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-
-                return false;
-            }
-        });*/
 
         final ViewHolder viewHolder;
 
@@ -103,7 +95,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         viewHolder.txtHeader.setText(getGroup(i).toString());
         viewHolder.btnImage.setFocusable(false);
         viewHolder.btnDownload.setFocusable(false);
-        //viewHolder.btnImage.setOnClickListener(new OnClickListener());
+        viewHolder.btnImage.setOnClickListener(view1 -> ((ProfessionalDeVExpFragment) fragment).onClickImage(i));
+        viewHolder.btnDownload.setOnClickListener(view1 -> ((ProfessionalDeVExpFragment) fragment).onClickDownload(i));
         return view;
     }
 

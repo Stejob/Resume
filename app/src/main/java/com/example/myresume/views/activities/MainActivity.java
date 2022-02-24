@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity
     ActivityMainBinding mBinding;
     FragmentViewPagerAdapter viewPagerAdapter;
     View previousBtn;
-    Fragment previousFrag;
     ImageButton [] imageButtons;
 
     @Override
@@ -46,27 +45,20 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-                if (previousBtn != null /*&& previousFrag != null*/) {
+                if (previousBtn != null) {
                     previousBtn.setSelected(false);
-
-                    //previousBtn.setElevation(getResources().getDimension(R.dimen.cardview_default_elevation));
                 }
                 previousBtn = imageButtons [position];
                 imageButtons[position].setSelected(true);
-                //imageButtons[position].setElevation(0f);
-               // viewPagerAdapter.careerFragment.startAnim();
-                //super.onPageScrollStateChanged(position);
             }
 
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                mBinding.btn3.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.splash_logo_anim));
+                imageButtons[position].startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.splash_logo_anim));
             }
-
         });
     }
-
 
     @Override
     public void onMainActBtnClicked(int position) {
