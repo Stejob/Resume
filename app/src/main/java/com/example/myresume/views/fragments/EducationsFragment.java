@@ -60,6 +60,24 @@ public class EducationsFragment extends Fragment implements OnFragBtnClicks {
     @Override
     public void onClickListener(int id) {
         switch (id){
+            case R.id.ll_education_android_header:
+                if(mBinding.llEducationAndroidBody.getVisibility() != View.GONE){
+                    mBinding.llEducationAndroidBody.setVisibility(View.GONE);
+                    mBinding.imgAndroidDown.setImageResource(R.drawable.ic_keyboard_arrow_down_24);
+                }else {
+                    mBinding.llEducationAndroidBody.setVisibility(View.VISIBLE);
+                    mBinding.imgAndroidDown.setImageResource(R.drawable.ic_keyboard_arrow_up_24);
+                }
+                break;
+            case R.id.ll_education_engineering_header:
+                if(mBinding.llEducationEngineeringBody.getVisibility() != View.GONE){
+                    mBinding.llEducationEngineeringBody.setVisibility(View.GONE);
+                    mBinding.imgEducationEngineeringDown.setImageResource(R.drawable.ic_keyboard_arrow_down_24);
+                }else {
+                    mBinding.llEducationEngineeringBody.setVisibility(View.VISIBLE);
+                    mBinding.imgEducationEngineeringDown.setImageResource(R.drawable.ic_keyboard_arrow_up_24);
+                }
+                break;
             case R.id.btn_go_to_school_1:
             case R.id.txt_school_1:
             case R.id.btn_go_to_school_2:

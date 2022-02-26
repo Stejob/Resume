@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_app_very_low"
+        android:paddingStart="@dimen/margin_app_very_large"
         android:orientation="horizontal">
 
         <ImageView
@@ -19,8 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txt_project_detail_header"
-            android:textStyle="italic"
-            android:textColor="@color/main_act_header_black"/>
+            android:textStyle="italic"/>
 
         <TextView
             android:layout_width="wrap_content"

@@ -67,8 +67,8 @@
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.6"
-                android:layout_marginEnd="@dimen/minus_margin_main_act">
+                android:layout_marginEnd="@dimen/minus_margin_main_act"
+                android:layout_weight="0.7">
 
             </androidx.viewpager2.widget.ViewPager2>
 
@@ -79,87 +79,86 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/main_act_btns_margin"
-                android:layout_weight="0.32">
+                android:layout_weight="0.2">
 
 
                 <ImageButton
                     android:id="@+id/btn_1"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[0])}"
                     android:padding="@dimen/padding_btn_icons"
-                    android:layout_margin="@dimen/main_act_btns_margin"
                     app:iconUrl="@{utils.HIGHLIGHTS_IMAGE_URL}"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/btn4"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/btn_2"
-                    app:layout_constraintBottom_toTopOf="@+id/btn4"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/btn_2"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[1])}"
                     android:padding="@dimen/padding_btn_icons"
-                    android:layout_margin="@dimen/main_act_btns_margin"
                     app:iconUrl="@{utils.PROFESSIONAL_DEV_EXP_IMAGE_URL}"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/btn_1"
+                    app:layout_constraintBottom_toTopOf="@+id/btn5"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/btn3"
-                    app:layout_constraintBottom_toTopOf="@+id/btn5"/>
+                    app:layout_constraintStart_toEndOf="@id/btn_1"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/btn3"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[2])}"
                     android:padding="@dimen/padding_btn_icons"
-                    android:layout_margin="@dimen/main_act_btns_margin"
                     app:iconUrl="@{utils.EDUCATIONS_IMAGE_URL}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@+id/btn6"
-                    app:layout_constraintStart_toEndOf="@+id/btn_2" />
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_2"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <ImageButton
                     android:id="@+id/btn4"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[3])}"
                     android:padding="@dimen/padding_btn_icons"
-                    android:layout_margin="@dimen/main_act_btns_margin"
                     app:iconUrl="@{utils.OTHER_EXP_SKILLS_IMAGE_URL}"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/btn5"
-                    app:layout_constraintTop_toBottomOf="@id/btn_1"
-                    />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_1" />
 
                 <ImageButton
                     android:id="@+id/btn5"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[4])}"
                     android:padding="@dimen/padding_btn_icons"
-                    android:layout_margin="@dimen/main_act_btns_margin"
                     app:iconUrl="@{utils.CERTIFICATIONS_IMAGE_URL}"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/btn6"
                     app:layout_constraintStart_toEndOf="@+id/btn4"
                     app:layout_constraintTop_toBottomOf="@+id/btn_2" />
@@ -168,14 +167,14 @@
                     android:id="@+id/btn6"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_margin="@dimen/main_act_btns_margin"
                     android:background="@drawable/btn_mian_act"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:onClick="@{()->onBtnClicked.onMainActBtnClicked(utils.SECTIONS[5])}"
                     android:padding="@dimen/padding_btn_icons"
-                    android:layout_margin="@dimen/main_act_btns_margin"
                     app:iconUrl="@{utils.PERSONAL_DETAIL_IMAGE_URL}"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/btn5"
                     app:layout_constraintTop_toBottomOf="@+id/btn3" />

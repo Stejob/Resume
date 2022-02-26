@@ -159,7 +159,7 @@
     <string name="language_skills_1">English(fluent)</string>
     <string name="language_skills_2">Persian (native)</string>
 
-    <string name="teaching_exp_header">Teaching experience</string>
+    <string name="teaching_exp_header">Teaching experiences</string>
     <string name="teaching_exp_1">Design of experiment (DOE) | Sadr Co. Shiraz Iran</string>
     <string name="teaching_exp_2">Technical drawing | Azad University Shiraz Iran</string>
 
@@ -174,5 +174,6 @@
     <string name="txt_download_guest_app">GuestApp</string>
     <string name="cancel">cancel</string>
     <string name="excuse">is not available for download! It belongs to its founder and I have developed some parts. you can see its screenshots or download my other applications.</string>
+    <string name="functional_problem">Lack of Internet may cause some items to not be displayed properly.</string>
 
 </resources>

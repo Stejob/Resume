@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
 import com.example.myresume.R;
 import com.example.myresume.databinding.ActivitySplashBinding;
@@ -39,10 +41,10 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                if(!Utils.isInternetConnected(SplashActivity.this)){
-                    Utils.showInternetDialog(SplashActivity.this);
-                }
-                startMainActivity();
+                if(!Utils.isInternetConnected(SplashActivity.this))
+                    showInternetDialog(getResources().getString(R.string.check_internet_connection));
+                 else
+                    startMainActivity();
             }
 
             @Override
@@ -58,6 +60,20 @@ public class SplashActivity extends AppCompatActivity {
             SplashActivity.this.finish();
         }, 2000);
 
+    }
+
+    public void showInternetDialog (String massage){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(massage)
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.ok),
+                        (dialogInterface, i) -> {
+                    if(!Utils.isInternetConnected(SplashActivity.this)){
+                        Toast.makeText(this, getResources().getString(R.string.functional_problem), Toast.LENGTH_SHORT).show();
+                    }
+                    startMainActivity();
+                })
+                .show();
     }
 
     @Override

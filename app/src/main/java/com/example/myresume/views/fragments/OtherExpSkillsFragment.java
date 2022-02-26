@@ -51,7 +51,49 @@ public class OtherExpSkillsFragment extends Fragment implements OnFragBtnClicks 
 
     @Override
     public void onClickListener(int id) {
-        new ImageViewerDialogFragment(getContext(), imageUrls, headers)
-                .show(getChildFragmentManager(), UniversalUtils.CERTIFICATION_TAG_1);
+        switch (id){
+            case R.id.btn_show_other_skill_excel:
+            case R.id.txt_other_skill_excel:
+                new ImageViewerDialogFragment(getContext(), imageUrls, headers)
+                        .show(getChildFragmentManager(), UniversalUtils.CERTIFICATION_TAG_1);
+                break;
+            case R.id.ll_other_experiences_header:
+                if(mBinding.llOtherExperiences.getVisibility() != View.GONE){
+                    mBinding.llOtherExperiences.setVisibility(View.GONE);
+                    mBinding.imgOtherExperienceDown.setImageResource(R.drawable.ic_keyboard_arrow_down_24);
+                }else {
+                    mBinding.llOtherExperiences.setVisibility(View.VISIBLE);
+                    mBinding.imgOtherExperienceDown.setImageResource(R.drawable.ic_keyboard_arrow_up_24);
+                }
+                break;
+            case R.id.ll_other_skills_header:
+                if(mBinding.llOtherSkills.getVisibility() != View.GONE){
+                    mBinding.llOtherSkills.setVisibility(View.GONE);
+                    mBinding.imgOtherSkillsDown.setImageResource(R.drawable.ic_keyboard_arrow_down_24);
+                }else {
+                    mBinding.llOtherSkills.setVisibility(View.VISIBLE);
+                    mBinding.imgOtherSkillsDown.setImageResource(R.drawable.ic_keyboard_arrow_up_24);
+                }
+                break;
+            case R.id.ll_language_skills_header:
+                if(mBinding.llLanguageSkills.getVisibility() != View.GONE){
+                    mBinding.llLanguageSkills.setVisibility(View.GONE);
+                    mBinding.imgLanguageSkillsDown.setImageResource(R.drawable.ic_keyboard_arrow_down_24);
+                }else {
+                    mBinding.llLanguageSkills.setVisibility(View.VISIBLE);
+                    mBinding.imgLanguageSkillsDown.setImageResource(R.drawable.ic_keyboard_arrow_up_24);
+                }
+                break;
+            case R.id.ll_teaching_experiences_header:
+                if(mBinding.llTeachingExperiences.getVisibility() != View.GONE){
+                    mBinding.llTeachingExperiences.setVisibility(View.GONE);
+                    mBinding.imgTeachingExperienceDown.setImageResource(R.drawable.ic_keyboard_arrow_down_24);
+                }else {
+                    mBinding.llTeachingExperiences.setVisibility(View.VISIBLE);
+                    mBinding.imgTeachingExperienceDown.setImageResource(R.drawable.ic_keyboard_arrow_up_24);
+                }
+                break;
+        }
+
     }
 }

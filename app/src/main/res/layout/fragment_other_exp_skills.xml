@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <data>
         <variable
             name="click"
@@ -26,8 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/margin_app_large"
-                android:layout_marginEnd="@dimen/margin_app_large"
-                android:fadeScrollbars="false">
+                android:layout_marginEnd="@dimen/margin_app_large">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -35,251 +33,71 @@
                     android:orientation="vertical"
                     android:padding="@dimen/padding_app_large">
 
+                    <!--other experiences header-->
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/ll_other_experiences_header"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_experiences_header" />
+                        <ImageView
+                            android:id="@+id/img_other_experience_down"
+                            android:layout_width="@dimen/icon_24"
+                            android:layout_height="@dimen/icon_24"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_keyboard_arrow_down_24" />
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/line_width"
-                            android:background="@color/color_negative_dark" />
+                            android:layout_height="@dimen/_38"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/text_header_color"
+                                android:textStyle="bold"
+                                android:text="@string/other_experiences_header" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line_width"
+                                android:background="@android:color/darker_gray" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-
+                    <!--other experiences body-->
                     <LinearLayout
+                        android:id="@+id/ll_other_experiences"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
+                        android:layout_marginStart="@dimen/margin_app_very_large"
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:contentDescription="TODO"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/education_android_date_1" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginStart="@dimen/margin_app__very_very_large"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_remove_20" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
-                            android:text="@string/other_experiences_exp_1" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_experiences_date_2" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginStart="@dimen/margin_app__very_very_large"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_remove_20" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
-                            android:text="@string/other_experiences_exp_2" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_experiences_date_3" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginStart="@dimen/margin_app__very_very_large"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_remove_20" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
-                            android:text="@string/other_experiences_exp_3" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_experiences_date_4" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginStart="@dimen/margin_app__very_very_large"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_remove_20" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
-                            android:text="@string/other_experiences_exp_4" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/education_android_date_2" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_header" />
-
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/line_width"
-                            android:background="@color/color_negative_dark" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_1" />
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_experience_skill_48_green" />
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_experiences_date_1" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        </LinearLayout>
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -287,7 +105,6 @@
                             android:layout_alignParentStart="true"
                             android:layout_marginStart="@dimen/margin_app__very_very_large"
                             android:layout_marginTop="@dimen/margin_app_low"
-                            android:layout_toStartOf="@id/btn_show_other_skill_excel"
                             android:orientation="horizontal">
 
                             <ImageView
@@ -297,253 +114,537 @@
                                 android:src="@drawable/ic_remove_20" />
 
                             <TextView
-                                android:id="@+id/txt_other_skill_excel"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="@{(view) -> click.onClickListener(view.id)}"
-                                android:text="@string/other_skills_1_sub_skill" />
+                                android:text="@string/other_experiences_exp_1" />
 
                         </LinearLayout>
 
-                        <ImageButton
-                            android:id="@+id/btn_show_other_skill_excel"
-                            android:layout_width="@dimen/btn_small_sizes"
-                            android:layout_height="@dimen/btn_small_sizes"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="@dimen/margin_app_very_low"
-                            android:layout_marginEnd="1dp"
-                            android:background="?selectableItemBackgroundBorderless"
-                            android:elevation="@dimen/cardview_default_elevation"
-                            android:focusable="false"
-                            android:onClick="@{(view) -> click.onClickListener(view.id)}"
-                            android:padding="@dimen/padding_app_low"
-                            android:src="@drawable/ic_image_20"
-                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-                    </RelativeLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_2" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_3" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_4" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_5" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_6" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other_skills_7" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/language_skills_header" />
-
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/line_width"
-                            android:background="@color/color_negative_dark" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/language_skills_1" />
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_experience_skill_48_green" />
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_experiences_date_2" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
-                        android:orientation="horizontal">
+                        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/language_skills_2" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/teaching_exp_header" />
-
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/line_width"
-                            android:background="@color/color_negative_dark" />
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                                android:text="@string/other_experiences_exp_2" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_experience_skill_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_experiences_date_3" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                                android:text="@string/other_experiences_exp_3" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_experience_skill_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_experiences_date_4" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/margin_app__very_very_large"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_remove_20" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                                android:text="@string/other_experiences_exp_4" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
+                    <!--other skills header-->
                     <LinearLayout
+                        android:id="@+id/ll_other_skills_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
+                        android:onClick="@{(view) -> click.onClickListener(view.id)}"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
+                            android:id="@+id/img_other_skills_down"
+                            android:layout_width="@dimen/icon_24"
+                            android:layout_height="@dimen/icon_24"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_keyboard_arrow_down_24" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_38"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/text_header_color"
+                                android:textStyle="bold"
+                                android:text="@string/other_skills_header" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line_width"
+                                android:background="@android:color/darker_gray" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--other skills body-->
+                    <LinearLayout
+                        android:id="@+id/ll_other_skills"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_app_very_large"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/teaching_exp_1" />
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_1" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="@dimen/margin_app__very_very_large"
+                                android:layout_marginTop="@dimen/margin_app_low"
+                                android:layout_toStartOf="@id/btn_show_other_skill_excel"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_app_low"
+                                    android:src="@drawable/ic_remove_20" />
+
+                                <TextView
+                                    android:id="@+id/txt_other_skill_excel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                                    android:text="@string/other_skills_1_sub_skill" />
+
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btn_show_other_skill_excel"
+                                android:layout_width="@dimen/btn_small_sizes"
+                                android:layout_height="@dimen/btn_small_sizes"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/margin_app_very_low"
+                                android:layout_marginEnd="1dp"
+                                android:background="?selectableItemBackgroundBorderless"
+                                android:elevation="@dimen/cardview_default_elevation"
+                                android:focusable="false"
+                                android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                                android:padding="@dimen/padding_app_low"
+                                android:src="@drawable/ic_image_20"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_2" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_3" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_4" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_5" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_6" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/ic_teaching_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/other_skills_7" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
+                    <!--language skills header-->
                     <LinearLayout
+                        android:id="@+id/ll_language_skills_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_app_low"
+                        android:onClick="@{(view) -> click.onClickListener(view.id)}"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_app_low"
-                            android:src="@drawable/ic_play_arrow_24" />
+                            android:id="@+id/img_language_skills_down"
+                            android:layout_width="@dimen/icon_24"
+                            android:layout_height="@dimen/icon_24"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_keyboard_arrow_down_24" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_38"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/text_header_color"
+                                android:textStyle="bold"
+                                android:text="@string/language_skills_header" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line_width"
+                                android:background="@android:color/darker_gray"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--language skills body-->
+                    <LinearLayout
+                        android:id="@+id/ll_language_skills"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_app_very_large"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/teaching_exp_2" />
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_language_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/language_skills_1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_language_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/language_skills_2" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--teaching experiences header-->
+                    <LinearLayout
+                        android:id="@+id/ll_teaching_experiences_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{(view) -> click.onClickListener(view.id)}"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_teaching_experience_down"
+                            android:layout_width="@dimen/icon_24"
+                            android:layout_height="@dimen/icon_24"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_keyboard_arrow_down_24" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_38"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/text_header_color"
+                                android:textStyle="bold"
+                                android:text="@string/teaching_exp_header" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line_width"
+                                android:background="@android:color/darker_gray"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--teaching experiences body-->
+                    <LinearLayout
+                        android:id="@+id/ll_teaching_experiences"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_app_very_large"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_training_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/teaching_exp_1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_app_low"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_24"
+                                android:layout_height="@dimen/icon_24"
+                                android:layout_marginEnd="@dimen/margin_app_low"
+                                android:src="@drawable/icons8_training_48_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/teaching_exp_2" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
