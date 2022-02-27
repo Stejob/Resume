@@ -2,24 +2,19 @@ package com.example.myresume.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Intent;
-import android.net.Uri;
+import android.content.Context;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
+import android.os.Vibrator;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.myresume.R;
 import com.example.myresume.adapters.FragmentViewPagerAdapter;
 import com.example.myresume.databinding.ActivityMainBinding;
 import com.example.myresume.interfaces.OnMainActButtonClicks;
-import com.example.myresume.utils.UniversalUtils;
 
 public class MainActivity extends AppCompatActivity
         implements OnMainActButtonClicks
@@ -37,14 +32,6 @@ public class MainActivity extends AppCompatActivity
         viewPagerAdapter = new FragmentViewPagerAdapter(this);
         mBinding.viewPager.setAdapter(viewPagerAdapter);
         mBinding.setOnBtnClicked(this);
-
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int height = displayMetrics.heightPixels;
-        int width = displayMetrics.widthPixels;
-
-        Log.e("height", "onCreate: " + height);
-        Log.e("width", "onCreate: " + width);
 
         imageButtons = new ImageButton[]{mBinding.btn1, mBinding.btn2,
                         mBinding.btn3, mBinding.btn4, mBinding.btn5, mBinding.btn6};
@@ -64,6 +51,12 @@ public class MainActivity extends AppCompatActivity
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 imageButtons[position].startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.splash_logo_anim));
+                vibrateBtn();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
             }
         });
     }
@@ -71,6 +64,11 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onMainActBtnClicked(int position) {
         mBinding.viewPager.setCurrentItem(position, true);
+    }
+
+    public void vibrateBtn (){
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(4);
     }
 
 }

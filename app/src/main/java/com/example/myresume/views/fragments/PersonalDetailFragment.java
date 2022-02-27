@@ -86,6 +86,10 @@ public class PersonalDetailFragment extends Fragment implements OnFragBtnClicks 
             case R.id.btn_go_to_location:
                 locateMe();
                 break;
+            case R.id.txt_resume:
+            case R.id.btn_go_to_resume:
+                openWebAddress(getResources().getString(R.string.resume_download_link));
+                break;
             case R.id.txt_github:
             case R.id.btn_go_to_github:
                 openWebAddress(getResources().getString(R.string.github_address));
