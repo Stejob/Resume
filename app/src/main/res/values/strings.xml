@@ -74,7 +74,7 @@
     <string name="location_nv">Ma\'ali abad, Shiraz, Iran</string>
     <string name="resume">You can download my resume (PDF version) over here</string>
     <string name="location_on_map" formatted="false">>https://www.google.com/maps/place/Villa+Wangsamas,+Taman+Sri+Rampai,+53300+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur,+Malaysia/@3.1947363,101.7338672,17z/data=!3m1!4b1!4m5!3m4!1s0x31cc3826af2655ff:0x7752a07ffa177d71!8m2!3d3.1947363!4d101.7360559</string>
-    <string name="career_objective">A forward-thinking developer offering more than 3 years of experience in building, integrating, testing and supporting Android applications for  mobile and tablet devices on the Android platform with benefit of Industrial engineering experiences. I am always looking to achieve client  satisfaction to earn long term business.</string>
+    <string name="career_objective">A forward-thinking developer offering %s years of experience in building, integrating, testing and supporting Android applications for  mobile and tablet devices on the Android platform with benefit of Industrial engineering experiences. I am always looking to achieve client  satisfaction to earn long term business.</string>
     <string name="txt_splash_act">" Stejob  "</string>
     <string name="first_frag_header">HIGHLIGHTS</string>
     <string name="second_frag_header">PROFESSIONAL DEV. EXPERIENCES</string>
@@ -186,5 +186,6 @@
     <string name="cancel">cancel</string>
     <string name="excuse">is not available for download! It belongs to its founder and I have developed some parts. you can see its screenshots or download my other applications.</string>
     <string name="functional_problem">Lack of Internet may cause some items to not be displayed properly.</string>
+    <string name="start_date_exp">1536661534</string>
 
 </resources>

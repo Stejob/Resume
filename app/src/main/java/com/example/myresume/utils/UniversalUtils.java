@@ -11,10 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 public class UniversalUtils {
-
+    /**
+     * TODO: (Important) Check booleans before release
+     */
     public static final boolean IS_IT_MY_VERSION = false; // it goes false for universal version
     public static final boolean IS_NV = true; // represent NV (Native Version) an IV (International version)
     public static final String VERSION_CONTROL_URL = "version_control.php";
+    public static final long START_DATE_TIMESTAMP = 1536661534; // Tuesday, September 11, 2018 10:25:34 AM
     public static final int MAIN_ACT_HEADER_IMAGE_URL = R.drawable.nav_menu_header_bg_blue;
     public static final int MAIN_ACT_MY_IMAGE_URL = R.drawable.reza;
     public static final int HIGHLIGHTS_IMAGE_URL = R.drawable.ic_person_pin_40;

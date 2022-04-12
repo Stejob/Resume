@@ -2,6 +2,7 @@ package com.example.myresume.views.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 
 import com.example.myresume.R;
 import com.example.myresume.databinding.FragmentHighlightsBinding;
+import com.example.myresume.utils.UniversalUtils;
+
 
 public class HighlightsFragment extends Fragment {
 
@@ -34,10 +37,28 @@ public class HighlightsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mfBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_highlights, container, false);
+        mfBinding = DataBindingUtil.inflate(
+                inflater, R.layout.fragment_highlights, container, false);
         View view = mfBinding.getRoot();
+        mfBinding.txtCareer.setText(
+                requireContext().getResources().getString(R.string.career_objective, checkExpYears()));
         return view;
+    }
+
+    private String checkExpYears() {
+        double yearsOfExpLong =  ((System.currentTimeMillis() / 1000.0 - UniversalUtils.START_DATE_TIMESTAMP) /
+                60.0 /
+                60.0 /
+                24.0 /
+                365.0);
+        String yearsOfExp = "";
+        if (yearsOfExpLong - (int) yearsOfExpLong > 0.80000) {
+            yearsOfExp = String.valueOf((int) yearsOfExpLong + 1);
+        } else {
+            yearsOfExp = "more than " + (int) yearsOfExpLong;
+        }
+        return yearsOfExp;
     }
 }

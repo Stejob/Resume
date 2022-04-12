@@ -32,7 +32,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:lineSpacingExtra="@dimen/line_spacing"
-                        android:text="@string/career_objective"
+                        android:id="@+id/txt_career"
                         android:justificationMode="inter_word"
                         android:layout_marginBottom="@dimen/margin_app_very_low"/>
 
