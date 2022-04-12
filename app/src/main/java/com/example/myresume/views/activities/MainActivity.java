@@ -70,5 +70,4 @@ public class MainActivity extends AppCompatActivity
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(4);
     }
-
 }

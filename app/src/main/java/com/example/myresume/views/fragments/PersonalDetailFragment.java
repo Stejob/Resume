@@ -39,28 +39,45 @@ public class PersonalDetailFragment extends Fragment implements OnFragBtnClicks 
         // Inflate the layout for this fragment
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_personal_detail, container, false);
         View view = mBinding.getRoot();
+        if (UniversalUtils.IS_NV) initNv();
         GlideBindingAdapter.setImageIcon(mBinding.icon, UniversalUtils.PERSONAL_DETAIL_IMAGE_URL);
         mBinding.setOnClick(this);
         return view;
     }
 
-
+    private void initNv(){
+        mBinding.txtEmail.setText(R.string.email_nv);
+        mBinding.txtPhone.setText(R.string.phone_number_nv);
+        mBinding.txtLocation.setText(R.string.location_nv);
+    }
     public void callMe() {
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.phone_number)));
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(
+                "tel:" + (UniversalUtils.IS_NV?
+                        getResources().getString(R.string.phone_number_nv):
+                        getResources().getString(R.string.phone_number))));
         startActivity(intent);
     }
 
     public void emailMe() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { getResources().getString(R.string.email)});
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {
+                (UniversalUtils.IS_NV?
+                        getResources().getString(R.string.email_nv):
+                        getResources().getString(R.string.email)
+                )
+        });
         intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.email_response_subject));
         intent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.email_response_body));
         startActivity(Intent.createChooser(intent, ""));
     }
 
     public void locateMe() {
-        String uri = String.format(Locale.US, "geo:%f,%f", 3.1945992936520997, 101.73609188181749);
+        String uri = String.format(
+                Locale.US, "geo:%f,%f",
+                (UniversalUtils.IS_NV? 29.681895939840906 : 3.1945992936520997),
+                (UniversalUtils.IS_NV? 52.46648664604704 : 101.73609188181749)
+        );
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
         startActivity(intent);
     }
@@ -88,7 +105,10 @@ public class PersonalDetailFragment extends Fragment implements OnFragBtnClicks 
                 break;
             case R.id.txt_resume:
             case R.id.btn_go_to_resume:
-                openWebAddress(getResources().getString(R.string.resume_download_link));
+                if (UniversalUtils.IS_NV)
+                    openWebAddress(getResources().getString(R.string.resume_download_link_nv));
+                else
+                    openWebAddress(getResources().getString(R.string.resume_download_link));
                 break;
             case R.id.txt_github:
             case R.id.btn_go_to_github:

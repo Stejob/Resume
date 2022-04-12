@@ -6,7 +6,10 @@ import androidx.databinding.DataBindingUtil;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -15,16 +18,26 @@ import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.example.myresume.R;
+import com.example.myresume.api.ApiConnection;
 import com.example.myresume.databinding.ActivitySplashBinding;
+import com.example.myresume.utils.JsonUtil;
+import com.example.myresume.utils.UniversalUtils;
 import com.example.myresume.utils.Utils;
 
 public class SplashActivity extends AppCompatActivity {
 
     ActivitySplashBinding mBinding;
+    private String appVersion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
+        try {
+            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            appVersion = pInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
         Animation logoAnim, txtLogoAnim;
         logoAnim = AnimationUtils.loadAnimation(this, R.anim.splash_logo_anim);
         txtLogoAnim = AnimationUtils.loadAnimation(this, R.anim.fade_in_anim);
@@ -43,8 +56,11 @@ public class SplashActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 if(!Utils.isInternetConnected(SplashActivity.this))
                     showInternetDialog(getResources().getString(R.string.check_internet_connection));
-                 else
+                else {
+                    if (!UniversalUtils.IS_IT_MY_VERSION)
+                        checkAppVersion();
                     startMainActivity();
+                }
             }
 
             @Override
@@ -52,6 +68,27 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void checkAppVersion (){
+        ApiConnection connection = new ApiConnection(this,
+                getResources().getString(R.string.url_address) + UniversalUtils.VERSION_CONTROL_URL,
+                new ApiConnection.Stuff() {
+                    @Override
+                    public String backgroundSetup() {
+                        return JsonUtil.requestVersionControl(getResources().getString(R.string.url_approval),
+                                appVersion);
+                    }
+
+                    @Override
+                    public void onPreExe() {
+                    }
+
+                    @Override
+                    public void onPostExe(String s) {
+                    }
+                });
+        connection.execute();
     }
 
     public void startMainActivity() {

@@ -133,6 +133,22 @@
                             android:text="@string/highlights_item_5"/>
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_app_very_low"
+                        android:paddingStart="@dimen/padding_app_normal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_done_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:justificationMode="inter_word"
+                            android:text="@string/highlights_item_6"/>
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </ScrollView>

@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Stejob Resume</string>
+    <string name="url_approval">#DooNvHOKJGK455%$?vfdliuhVcalahante$$</string>
+    <string name="url_address">http://stjobs.ir/stejob-resume/</string>
+
+
     <string name="phone_number">+60 14 825 8785</string>
-    <string name="my_name">Reza Stejob</string>
+    <string name="phone_number_nv">+98 917 338 1951</string>
     <string name="email">stejob.reza@gmail.com</string>
+    <string name="email_nv">rezaesr@gmail.com</string>
+    <string name="my_name">Reza Stejob</string>
     <string name="resume_download_link">http://www.stjobs.ir/stejob-resume/StejobResume.pdf</string>
+    <string name="resume_download_link_nv">http://www.stjobs.ir/stejob-resume/StejobResumeNv.pdf</string>
     <string name="github_address" formatted="false">https://www.github.com/Stejob</string>
     <string name="stack_overflow_address" formatted="false">https://www.stackoverflow.com/users/9894217/reza</string>
     <string name="linkedin_address" formatted="false">https://www.linkedin.com/in/reza-stejob-821a5b2</string>
@@ -64,6 +71,7 @@
     <string name="email_response_subject">Reply from CV application</string>
     <string name="email_response_body">Dear Reza</string>
     <string name="location">C– 25– 09  VILLAWANGSAMAS  CONDO\nWANGSAM MAJU - KUALA LUMPUR</string>
+    <string name="location_nv">Ma\'ali abad, Shiraz, Iran</string>
     <string name="resume">You can download my resume (PDF version) over here</string>
     <string name="location_on_map" formatted="false">>https://www.google.com/maps/place/Villa+Wangsamas,+Taman+Sri+Rampai,+53300+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur,+Malaysia/@3.1947363,101.7338672,17z/data=!3m1!4b1!4m5!3m4!1s0x31cc3826af2655ff:0x7752a07ffa177d71!8m2!3d3.1947363!4d101.7360559</string>
     <string name="career_objective">A forward-thinking developer offering more than 3 years of experience in building, integrating, testing and supporting Android applications for  mobile and tablet devices on the Android platform with benefit of Industrial engineering experiences. I am always looking to achieve client  satisfaction to earn long term business.</string>
@@ -82,6 +90,7 @@
     <string name="highlights_item_3"> Known for writing efficient, maintainable and reusable code</string>
     <string name="highlights_item_4"> Proficient in design, data structures, problem-solving, and debugging</string>
     <string name="highlights_item_5"> Expert in the interaction between various devices and versions  of Android</string>
+    <string name="highlights_item_6"> Experienced in various types of libraries such as Retrofit, Glide, Zxing, and different kinds of architectures such as MVVM and MVP</string>
 
     <!--project details-->
     <string name="project_cyrcles_pay_header">CYRCLES PAY project (USA)</string>
